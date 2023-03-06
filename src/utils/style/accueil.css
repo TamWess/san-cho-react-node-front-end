@@ -1,0 +1,556 @@
+/* Meyer-reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Titi Burger*/
+body * {
+  z-index: 2;
+}
+
+@font-face {
+  font-family: "Changa-One";
+  src: url(./assets/fonts/ChangaOne-Regular.ttf);
+}
+@font-face {
+  font-family: "After-Smile";
+  src: url(/assets/fonts/AfterSmile-Regular.otf);
+}
+h1 {
+  font-family: "Changa-One";
+  color: aliceblue;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 20px;
+  top: 160px;
+  font-size: 75px;
+  text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0, 0, 0, 0.4);
+  transition: 1s;
+}
+h1 h1:hover {
+  padding-bottom: 30px;
+  font-size: 78px;
+  padding: 0px 930px 90px 0;
+  color: rgb(255, 238, 0);
+}
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Changa-One";
+  text-align: center;
+  font-size: 40px;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/*Boutons Click and Collect - Livraison*/
+#homeImage {
+  padding-top: 100px;
+  width: 100%;
+  height: 520px;
+  background: url(/assets/img/san_cho_accueil.jpg) no-repeat;
+  background-size: cover;
+}
+
+.mousemove {
+  height: 100px;
+  width: 100px;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  filter: invert(92%) sepia(1%) saturate(0%) hue-rotate(187deg) brightness(89%) contrast(90%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/******Banniere*****/
+.banniere {
+  box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 92px;
+  width: 100%;
+  background: url(/assets/img/Banniere_san_cho_01.jpg);
+}
+
+.divBanniere {
+  font-size: 40px;
+}
+
+/******Le Resto*****/
+.restoStory {
+  margin: 70px 20px 70px 60px;
+  display: flex;
+  position: relative;
+  right: 1200px;
+  opacity: 0;
+  transition: 1s;
+}
+
+.leResto {
+  outline: solid 4px rgb(0, 0, 0);
+  box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
+  border-radius: 50px 0 50px 0;
+  padding-top: 20px;
+  width: 50%;
+  height: 290px;
+  background: rgb(255, 191, 0);
+  background: url(/assets/img/Fiesta_garden-m.jpg) no-repeat;
+  background-size: cover;
+}
+
+.TitleLeResto {
+  color: white;
+}
+
+.titiStory {
+  margin-left: 5%;
+  margin-top: 4px;
+  height: fit-content;
+  padding-top: 20px;
+  width: 39%;
+  outline: solid 4px rgb(0, 0, 0);
+}
+
+.titiStoryTitle {
+  color: black;
+  outline: none;
+}
+
+.titiStory p {
+  padding-top: 34px;
+  margin-left: 27px;
+  padding: 15px, 20px, 10px, 20px;
+  width: 90%;
+  text-align: center;
+  outline: none;
+}
+
+.lireLaSuite {
+  padding-top: 35px;
+  padding-bottom: 7px;
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.VLine {
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 93%;
+}
+
+/*******Nos Burgers******/
+.nosBurgerSection {
+  margin: 0px 0px 70px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nosBurgersTitle {
+  padding-top: 3%;
+}
+
+.nosBurgers {
+  padding-bottom: 3%;
+  outline: solid 4px rgb(0, 0, 0);
+  box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
+  border-radius: 40px 0 40px 0;
+  background: rgb(212, 255, 0);
+  width: 47%;
+  height: fit-content;
+  margin-left: 53px;
+}
+
+.nosBurgersText {
+  padding-top: 30px;
+  margin: 0 25px;
+}
+
+.carroussel {
+  left: 42px;
+  padding-left: 19px;
+  opacity: 0;
+  left: 1200px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5%;
+  width: 43%;
+  transition: 1s;
+}
+
+.carrousselCadre {
+  margin-left: 21px;
+  width: fit-content;
+}
+
+.slick-next:before, .slick-prev:before {
+  font-family: slick;
+  font-size: 37px;
+  line-height: 1;
+  opacity: 0.75;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.image1, .image2, .image3 {
+  margin-top: 12px;
+  margin-left: -10px;
+  width: 189px;
+  height: 164px;
+  border-radius: 183px;
+}
+
+/*******Actus*******/
+.actus {
+  display: flex;
+  flex-direction: column;
+  background: url(/assets/img/Banniere-san-cho-02-large.jpg) no-repeat;
+}
+
+.actusBigTitle {
+  color: black;
+  padding-top: 23px;
+  padding-bottom: 45px;
+}
+
+.actusTitle {
+  color: black;
+  font-size: 20px;
+  margin-top: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.actusTitle:hover {
+  font-size: 21px;
+}
+
+.actusSub {
+  padding-bottom: 20px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.imageActus1, .imageActus2, .imageActus3 {
+  box-shadow: 5px 5px 10px #888888;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  transition: 0.7s;
+}
+
+.imageActus1:hover, .imageActus2:hover, .imageActus3:hover {
+  filter: brightness(130%);
+}
+
+.newsletter {
+  font-family: "Changa-One";
+  outline: solid 4px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+  width: 80%;
+  height: 185px;
+  background: rgb(212, 255, 0);
+  margin: 0 auto;
+  margin-top: 2%;
+  box-shadow: 5px 5px 10px #888888;
+}
+.newsletter .newsletter01 .newsletter02 .newsletter03 {
+  height: 100%;
+}
+.newsletter .newsletter01 {
+  font-size: 25px;
+  display: flex;
+  padding-bottom: 1%;
+  font-family: "Changa-One";
+  font-size: 33px;
+  align-items: center;
+  padding-left: 35px;
+  width: 30%;
+}
+.newsletter .newsletter02 {
+  font-size: 25px;
+  display: flex;
+  margin-top: 1%;
+  font-family: "Changa-One";
+  justify-content: end;
+  align-items: center;
+  text-align: right;
+  padding-right: 2%;
+  width: 17%;
+}
+.newsletter .newsletter03 {
+  font-size: 25px;
+  display: flex;
+  font-family: "Changa-One";
+  padding: 20px 10px 0 0;
+  justify-content: end;
+  text-align: justify;
+  text-align: right;
+  width: 45%;
+}
+.newsletter label {
+  margin-left: 1%;
+  margin-top: 7%;
+  margin-bottom: 3%;
+  font-size: 25px;
+  font-family: "Changa-One";
+}
+
+.newsletter02 img {
+  padding-left: 10%;
+  height: 17%;
+}
+
+.sendButton {
+  margin-right: 1.5%;
+  margin-left: 43.5%;
+  margin-top: 159%;
+  height: 25%;
+}
+
+#emailNewsLetter {
+  outline: solid 4px rgb(0, 0, 0);
+  margin-left: 2%;
+  margin-top: 6.3%;
+  width: 30%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+#pimentImage {
+  width: 100%;
+  height: 250px;
+  background: url(/assets/img/Piment_taille_m.png) no-repeat;
+}
+
+@media screen and (max-width: 576px) {
+  #homeImage {
+    padding-top: 100px;
+    width: 100%;
+    background: url(/assets/img/san_cho_accueil-sm.jpg) no-repeat;
+    background-size: cover;
+  }
+  .mousemove {
+    display: none;
+  }
+  h1 {
+    color: aliceblue;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 28px;
+    top: 436px;
+    font-size: 47px;
+    text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0, 0, 0, 0.4);
+    transition: 1s;
+  }
+  .divBanniere {
+    font-size: 13px;
+  }
+  .restoStory {
+    margin: 70px 20px 70px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .leResto h2 {
+    visibility: hidden;
+  }
+  .leResto {
+    width: 100%;
+  }
+  .titiStory {
+    width: 100%;
+  }
+  .nosBurgerSection {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nosBurgers {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 93%;
+    height: 30%;
+  }
+  .nosBurgersText {
+    padding-bottom: 35px;
+  }
+  .actusSub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background: url(/assets/img/Banniere_san_cho_02.png) no-repeat;
+  }
+  .newsletter01 {
+    font-size: 10px;
+    display: none;
+  }
+  .newsletter02 {
+    font-size: 10px;
+    text-align: right;
+    padding-left: 20px;
+    width: 20%;
+  }
+  .newsletter03 {
+    font-size: 10px;
+    padding: 20px 10px 0 0;
+    text-align: center;
+    width: 100%;
+  }
+  #pimentImage {
+    width: 100%;
+    height: 75px;
+    background: url(/assets/img/Piment_taille_sm.png) no-repeat;
+    background-size: cover;
+  }
+}
+#clickAndCollect {
+  margin: auto;
+  padding-top: 300px;
+  width: 30%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  background: url(/assets/img/bouton-click-and-collect.jpg);
+}
+#clickAndCollect h2 {
+  color: black;
+}
+
+.restoStory {
+  z-index: 10;
+  padding-top: 78px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.storyImage {
+  box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
+  border-radius: 50px 0 50px 0;
+  padding-top: 20px;
+  width: 40%;
+  height: 545px;
+  background: rgb(255, 191, 0);
+  background: url(/assets/img/Fiesta_garden-m.jpg) no-repeat;
+  background-size: cover;
+}
+
+.textH1 {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+.sanChoStory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60%;
+}
+
+.subTitleStory {
+  text-align: center;
+  font-weight: bold;
+}
+
+.textStory01 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.textStory {
+  text-align: center;
+  margin: 20px 25px 25px 25px;
+  font-size: 18px;
+}
+
+.titiStoryTitle {
+  color: black;
+}
+
+.restoStory p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.restoStory .lireLaSuite {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=accueil.css.map */

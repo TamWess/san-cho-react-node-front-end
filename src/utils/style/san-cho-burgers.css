@@ -1,0 +1,298 @@
+/* Meyer-reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Titi Burger*/
+
+@font-face {
+    font-family: After Smile;
+    src: url(../TitiBurger/assets/Typo/AfterSmileRegular-K7M3y.otf);
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/******Story*****/
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: rgb(31, 31, 31);
+    padding: 10px 40px 0 0;
+    font-family: After Smile;
+    font-size: 55px;
+    text-shadow: 1px 3px 4px rgba(57, 57, 57, 0.27), -1px -1px 2px rgba(0,0,0,0.4); 
+    transition: 0.5s;
+}
+
+h1:hover{
+    color: rgb(255, 238, 0);
+}
+
+.selectionMenu{
+    padding-top: 78px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 585px;
+    background: url(assets/img/san_cho_accueil.jpg) no-repeat;
+    background-size: cover;
+}
+
+.menuImage{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px #88888869;
+    border-radius: 50px 0 50px 0;
+    width: 97%;
+    height: 94%;
+    background: url(/assets/img/Menu-background-pattern.jpg);
+    outline: solid 5px rgb(255, 225, 0);
+    background-size: cover;
+
+}
+
+.choisissezVotreBurger{
+    width: 50%;
+    height: 12%;
+}
+
+.filAriane{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    padding-right: 6%;
+    width: 44%;
+    height: 12%;
+}
+
+.arianeSelected{
+    position: relative;
+    border-radius: 10px;
+    outline: solid 4px rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    background: rgb(184, 184, 184);
+    transition: 0.5s;
+}
+
+.arianeSelected:hover{
+    border-radius: 10px;
+    outline: solid 4px rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    background: rgb(184, 184, 184);
+
+}
+
+.arianeVide{
+    position: relative;
+    border-radius: 10px;
+    outline: solid 4px rgb(42, 42, 42);
+    width: 40px;
+    height: 40px;
+    background: rgb(184, 184, 184);
+}
+
+.arianeFil{
+    padding-bottom: 24px;
+    width: 45px;
+    height: 45px;
+    background: url(/assets/img/arianeFil.png);
+}
+
+.line{
+    position: relative;
+    height:2px;
+    width: 94%;
+    background: rgb(143, 143, 143);
+}
+
+
+.encadrementDiptique{
+    display: flex;
+    flex-wrap: wrap;
+    height: 64%;
+    width: 100%;
+}
+    
+.burgersChoiceCadre1{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 49%;
+}
+
+.burgersChoiceCadre2{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 49%;
+}
+
+
+.burgerGrosSanCho{
+    padding-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 28%;
+}
+
+.burgerGrosSanchoImg img{
+    position: relative;
+    border-radius: 20px;
+    width: 120px;
+    height: 106px;
+    background: rgb(255, 255, 255, 0.75);
+    outline: solid 4px rgb(68, 68, 68);
+    transition: 0.5s;
+}
+
+.burgerGrosSanchoImg img:hover{
+    outline: solid 5px rgb(255, 255, 255);
+    width: 127px;
+    height: 110px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+#burger-1:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+#burger-2:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+#burger-3:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+#burger-4:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+h2{
+    font-weight: bold;
+    padding-right: 75px;
+    color: rgb(22, 22, 22);
+    text-align: center;
+    font-size: 17px;
+}
+
+.descriptionProduit{
+    margin-top:14px;
+    padding: 7px 0 0 15px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(255, 255, 255, 0.75);
+    outline: solid 4px rgb(68, 68, 68);
+    width: 60%;
+    height: 72%;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.encadrementDiptique p{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.boutonSuivant{
+        position: relative;
+        top: -5%;
+        left: 80%;
+        text-align: right;
+        padding: 30px;
+        transition: 0.5s;
+}
+    
+    
+.boutonSuivant a:hover{
+        color: rgb(255, 191, 0);
+        outline: solid 3px rgb(255, 191, 0);
+}
+
+
+
+/******Banniere*****/
+
+.banniere{
+    box-shadow: 5px 5px 10px #88888869;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background: url(assets/img/Banniere_san_cho_01.jpg);
+}
+
+.divBanniere{
+    font-size: 40px;
+}
+
+
+/*******Actus*******/
+
+.actus{
+    width: 100%;
+    height: 440px;
+    background: url(assets/img/Banniere_San_Cho_02.jpg) no-repeat;
+    background-size: cover;
+}
+
+
