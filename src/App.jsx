@@ -1,12 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../src/pages/pagesHome";
+import Home from "./pages/pagesHome/index.jsx";
 import Template from "./components/template";
+import Burger from "./pages/pageBurger";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Template />}>
-        <Route path="/src/pages/pagesHome" element={<Home />} />
+        <Route index element={<Home />} />
+        <Route path="/burger" element={<Burger />} />
       </Route>
     </Routes>
   );

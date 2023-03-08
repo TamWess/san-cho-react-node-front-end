@@ -1,4 +1,9 @@
-footer{
+@font-face {
+    font-family: "Changa-One";
+    src: url(../../../public/fonts/ChangaOne-Regular.ttf);
+  }
+
+.footer{
     font-family: "Changa-One";
     justify-content: space-around;
     display: flex;

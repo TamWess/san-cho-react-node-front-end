@@ -1,0 +1,20 @@
+.slick-slider{
+	margin: auto;
+	width: 39%
+}
+ 
+ 
+ .slick-slider img:not(.slick-arrow) {
+		border-radius: 25px;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+
+    .slick-next:before, .slick-prev:before {
+        color: black;
+    }
+
+    .slick-dots {
+        display: none;
+    }
