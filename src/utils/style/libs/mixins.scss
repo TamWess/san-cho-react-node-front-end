@@ -1,30 +1,25 @@
 @mixin h1{
-    h1{
-        color: aliceblue;
-        padding: 0px 930px 90px 0;
-        margin-bottom: 40px;
-        text-align: end;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-family: After Smile;
-        font-size: 75px;
-        text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0,0,0,0.4); 
-        transition: 1s;
-       }
-            h1:hover{
-                padding-bottom: 30px;
-                font-size: 78px;
-                padding: 0px 930px 90px 0;
-                color: rgb(255, 238, 0);
-                    }
-                    @media screen and (max-width: 992px) {
-                        h1{padding-bottom: 1050px;
-                        }}                    
-        }     
-        
-        
-@mixin newsletterDiv{
-    font-size: 25px;
-    display: flex;
-}
+	h1{
+		color: aliceblue;
+		padding: 0px 930px 90px 0;
+		margin-bottom: 40px;
+		text-align: end;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-family: After Smile;
+		font-size: 75px;
+		text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0,0,0,0.4); 
+		transition: 1s;
+	}
+	h1:hover{
+		padding-bottom: 30px;
+		font-size: 78px;
+		padding: 0px 930px 90px 0;
+		color: rgb(255, 238, 0);
+	}
+	@media screen and (max-width: 992px) {
+		h1{padding-bottom: 1050px;
+		}
+	}                    
+}     

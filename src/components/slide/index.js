@@ -24,7 +24,7 @@ function Slideshow() {
   };
   return (
     <>
-      <Slider className=".slider"{...settings}>
+      <Slider className="slider" {...settings}>
         <img src="/img/Burger_Le_Gros_San_Cho.jpg"></img>
         <img src="/img/Burger_El_Justo.jpg"></img>
         <img src="/img/Burger_La_Muerte.jpg"></img>

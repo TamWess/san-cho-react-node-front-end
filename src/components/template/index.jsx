@@ -1,10 +1,27 @@
 import React from "react";
-import "../../utils/style/meyer.css";
 import { Link, Outlet } from "react-router-dom";
+import {GoogleMap, useJsApiLoader} from '@react-google-maps/api';
 import "../../utils/style/header.css";
 import "../../utils/style/footer.css";
 
 function Template() {
+
+
+	const {isLoaded} = useJsApiLoader({
+		id: 'google-map-script',
+		googleMapsApiKey: "AIzaSyDoeRnemxCI74BFR79V4AG0pCjj4p4Kcdk"
+	})
+
+	const containerStyle = {
+		width: '100%',
+		height: '120px'
+	}
+
+	const center = {
+		lat: 48.860160,
+		lng: 2.346190 
+	}
+
   return (
     <>
       <header>
@@ -36,7 +53,7 @@ function Template() {
           <div className="headerRight">
             <div className="bouton">
               <Link
-                to="/san-cho-click-and-collect.html"
+                to="/clickandcollect"
                 className="callToAction"
               >
                 Click and Collect
@@ -90,7 +107,12 @@ function Template() {
               <p>San-Cho en région parisienne</p>
             </div>
             <div className="locationLogo"></div>
-            <div className="tempGoogleMap"></div>
+			{/* <GoogleMap
+				mapContainerStyle={containerStyle}
+				center={center}
+				zoom={10}
+			></GoogleMap> */}
+            {/* <div className="tempGoogleMap"></div> */}
           </div>
           <div className="footerDiv04">
             <p>Contact</p>

@@ -3,29 +3,30 @@ import "./style.css";
 
 function ClickCollect() {
 	return(
-		<>
+		<div id="clickCollectPage">
 		<div id="cadreVide">
 		</div>
 		<div id="clickAndCollect">
-            <div class="boutonClickCollect">
-                <h2 class="textCollect">Click & Collect</h2>
+            <div className="boutonClickCollect">
+                <h2 className="textCollect">Click & Collect</h2>
             </div>
-            <div class="squarePath">
-                <img class="rectangle" src="/icns/Rectangle_yellow.svg" alt=""/>
-                <img class="rectangle" src="/icns/Rectangle_yellow.svg" alt=""/>
-                <img class="rectangle" src="/icns/Rectangle_yellow.svg" alt=""/>
+            <div className="squarePath">
+                <img className="rectangle" src="/icns/Rectangle_yellow.svg" alt=""/>
+                <img className="rectangle" src="/icns/Rectangle_yellow.svg" alt=""/>
+                <img className="rectangle" src="/icns/Rectangle_yellow.svg" alt=""/>
             </div>
-		    <h2 class="commandDegustez">Commandez et dégustez</h2>
-			<p class="clickText">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+		    <h2 className="commandDegustez">Commandez et dégustez</h2>
+			<p className="clickText">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
             </p>
 		</div>
-		<a id="aCommencer" href="/san-cho-burgers.html">
+		<a id="aCommencer" href="/burger">
             <div id="sectionCommencer">
-			    <h2 class="commencer">Commencez</h2>
+			    <h2 className="commencer">Commencez</h2>
             </div>
         </a>
-		
-		</>
+		</div>
 	)
 }
+
+export default ClickCollect;

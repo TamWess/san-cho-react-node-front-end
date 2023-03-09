@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../utils/style/style.scss";
-import "../../utils/style/meyer.css";
 import Slideshow from "../../../src/components/slide/index";
 import "../../utils/style/footer.css";
+import "../../components/slide/style.css"
+
 
 // -----------JS-Classic---------
 
@@ -13,6 +14,9 @@ import "../../utils/style/footer.css";
 
 function Home() {
   useEffect(() => {
+
+	// ---------Anim Header------
+
     const header = document.querySelector(".container");
 
     let scroll = 0;
@@ -27,6 +31,16 @@ function Home() {
       scroll = window.scrollY;
     });
 
+	// -------Anim Burger-------
+
+	const Burger = document.querySelector("#homeImage")
+
+	function animBurger () {
+		Burger.style.right = 0
+	};
+
+	animBurger();
+
     const restoStory = document.querySelector(".restoStory");
     console.log(restoStory);
 
@@ -37,15 +51,22 @@ function Home() {
       }
     });
 
-    const carroussel = document.querySelector(".carroussel");
+	// -------- Anim Carroussel ------
+
     // console.log(carroussel);
 
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 830) {
-        carroussel.style.opacity = "1";
-        carroussel.style.left = "30px";
-      }
-    });
+	window.addEventListener('load', function() {
+		const carroussel = document.querySelector(".slider");
+
+		window.addEventListener("scroll", function () {
+			if (window.scrollY > 830) {
+				carroussel.style.opacity = "1";
+				carroussel.style.left = "0px";
+			}
+		});
+	})
+
+	// -------- Mousemove Burger ---------
 
     const mousemove = document.querySelector(".mousemove");
 
@@ -72,18 +93,16 @@ function Home() {
       rollBurger.style.left = "200px";
     });
 
-    const piment = document.querySelector("#pimentImage");
+    // const piment = document.querySelector("#pimentImage");
 
-    piment.addEventListener("mouseenter", function () {
-      console.log("waoooh!");
-      if (piment.mouseenter) {
-        piment.style.rotate = 90 + "deg";
-      }
+    // piment.addEventListener("mouseover", function () {
+    //   console.log("waoooh!");
+    //     piment.style.rotate = 25 + "deg";
+    // });
 
-      if (piment.mouseenter) {
-        piment.style.rotate = 0 + "deg";
-      }
-    });
+	// piment.addEventListener("mouseleave", function () {
+	//       piment.style.rotate = 0 + "deg";
+	//   });
 
     const burgerCarte = document.getElementById("burgerCarte");
     const burger01 = document.querySelectorAll(".burgersChoiceCadre1");

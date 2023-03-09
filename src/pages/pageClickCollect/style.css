@@ -1,9 +1,25 @@
-#cadreVide {
+
+@font-face {
+    font-family: "After Smile";
+    src: url(../../../public/fonts/AfterSmile-Regular.otf);
+}
+@font-face {
+    font-family: "Changa-One";
+    src: url(../../../public/fonts/ChangaOne-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url(../../../public/fonts/Lato-Regular.ttf);
+  }
+
+
+#clickCollectPage #cadreVide {
 	width: 100%;
 	height: 100px;
   }
   
-  #clickAndCollect .boutonClickCollect {
+  #clickCollectPage #clickAndCollect .boutonClickCollect {
 	outline: solid 4px rgb(0, 0, 0);
 	border-radius: 7px;
 	margin: auto;
@@ -11,56 +27,65 @@
 	height: 70px;
 	display: flex;
 	flex-direction: column;
-	background: url(/assets/img/bouton-click-and-collect.jpg);
+	background: url(../../../public/img/bouton-click-and-collect.jpg);
   }
-  #clickAndCollect .boutonClickCollect h2 {
+  #clickCollectPage #clickAndCollect .boutonClickCollect h2 {
+	font-family: "Changa-One";
+	font-size: 35px;
 	margin: auto;
 	color: black;
   }
   
-  .commandDegustez {
+  #clickCollectPage .commandDegustez {
+	font-family: "Changa-One";
+	font-size: 35px;
+	margin: 2% auto;
+	text-align: center;
 	padding: 1% 2% 1% 2%;
 	border-radius: 5px;
 	width: 35%;
 	outline: solid 4px rgb(0, 0, 0);
-	margin: 2% auto;
 	color: #333;
-	background: url(/assets/img/Bouton_Click-collect-white.jpg);
+	background: url(../../../public/img/Bouton_Click-collect-white.jpg);
   }
   
-  .squarePath {
+  #clickCollectPage .squarePath {
 	display: flex;
 	flex-direction: column;
 	margin-top: 1%;
 	width: 100%;
   }
   
-  .rectangle {
+  #clickCollectPage .rectangle {
 	padding-top: 1%;
 	margin: auto;
 	width: 10px;
   }
   
-  .clickText {
+  #clickCollectPage .clickText {
+	font-family: "Lato";
 	font-size: 20px;
 	text-align: center;
 	margin: 3% auto;
 	color: rgb(139, 139, 139);
   }
   
-  #aCommencer {
+  #clickCollectPage #aCommencer {
 	text-decoration: none;
   }
-  #aCommencer #sectionCommencer {
+  #clickCollectPage #aCommencer #sectionCommencer {
 	text-decoration: none;
 	outline: solid 4px rgb(0, 0, 0);
 	margin: auto;
+	text-align: center;
 	border-radius: 7px;
 	width: 50%;
 	height: 150px;
-	background: url(/assets/img/Bouton_Click-collect-yellow.jpg);
+	background: url(../../../public/img/Bouton_Click-collect-yellow.jpg);
   }
-  #aCommencer #sectionCommencer .commencer {
-	font-size: 60px;
+  #clickCollectPage #aCommencer #sectionCommencer .commencer {
+	font-family: "Changa-One";
+	font-size: 65px;
+	padding-top: 30px;
 	color: #333;
   }
