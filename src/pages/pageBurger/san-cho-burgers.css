@@ -227,13 +227,10 @@
         transition: 0.5s;
 }
     
-    
 .burger .boutonSuivant a:hover{
         color: rgb(255, 191, 0);
         outline: solid 3px rgb(255, 191, 0);
 }
-
-
 
 /******Banniere*****/
 

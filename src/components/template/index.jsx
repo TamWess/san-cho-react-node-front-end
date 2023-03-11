@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api';
 import "../../utils/style/header.css";
-import "../../utils/style/footer.css";
+import "../../utils/style/footer.scss";
 
 function Template() {
 
@@ -26,7 +26,7 @@ function Template() {
     <>
       <header>
         <div className="container">
-          <Link to="san-cho-accueil.html">
+          <Link to="/">
             <div className="logo">
               <img
                 src="/img/San_Cho_Logo_white.svg"
@@ -61,17 +61,16 @@ function Template() {
               <Link to="" className="callToAction">
                 Livraison
               </Link>
-
               <nav>
                 <ul className="listeNav">
                   <li>
                     <Link to="">La carte</Link>
                   </li>
                   <li>
-                    <Link to="san-cho-story.html">San Cho story</Link>
+                    <Link to="laSanChoStory">San Cho story</Link>
                   </li>
                   <li>
-                    <Link to="">Le resto</Link>
+                    <Link to="/LeResto">Le resto</Link>
                   </li>
                   <li>
                     <Link to="">Actus</Link>
@@ -98,13 +97,13 @@ function Template() {
           <div className="footerDiv02">
             <p>Plan du site</p>
             <p>La carte</p>
-            <p>San-Chaud Story</p>
+            <p>San Cho Story</p>
             <p>Le resto</p>
             <p>Actus</p>
           </div>
           <div className="footerDiv03">
             <div className="footerDiv03Text">
-              <p>San-Cho en région parisienne</p>
+              <p>San Cho en région parisienne</p>
             </div>
             <div className="locationLogo"></div>
 			{/* <GoogleMap

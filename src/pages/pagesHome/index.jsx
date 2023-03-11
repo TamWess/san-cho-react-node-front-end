@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { Link, Outlet } from "react-router-dom";
+// import "../../utils/style/base.scss";
 import "../../utils/style/style.scss";
 import Slideshow from "../../../src/components/slide/index";
-import "../../utils/style/footer.css";
+import "../../utils/style/footer.scss";
 import "../../components/slide/style.css"
+
 
 
 // -----------JS-Classic---------
@@ -13,7 +15,37 @@ import "../../components/slide/style.css"
 // ----------REACT-----------
 
 function Home() {
+
+
+
+	const videoRef = useRef();
   useEffect(() => {
+
+// --------- h1 ----------
+
+	const sanChoDeCuba = document.querySelector("h1");
+	sanChoDeCuba.style.right = "0px";
+
+	
+	// -------- Anim Carroussel ------
+	
+	// console.log(carroussel);
+	
+	window.addEventListener('load', function() {
+		const carroussel = document.querySelector(".slider");
+	
+		window.addEventListener("scroll", function () {
+			if (window.scrollY > 650) {
+				carroussel.style.opacity = "1";
+				carroussel.style.left = "0px";
+			}
+		});
+	})
+// // ---------Anime Burger PNG ----------
+
+// 	const burgerEntry = document.querySelector(".burgerPng");
+// 		burgerEntry.style.left = "0px";
+	
 
 	// ---------Anim Header------
 
@@ -33,13 +65,13 @@ function Home() {
 
 	// -------Anim Burger-------
 
-	const Burger = document.querySelector("#homeImage")
+	// const Burger = document.querySelector("#homeImage")
 
-	function animBurger () {
-		Burger.style.right = 0
-	};
+	// function animBurger () {
+	// 	Burger.style.right = 0
+	// };
 
-	animBurger();
+	// animBurger();
 
     const restoStory = document.querySelector(".restoStory");
     console.log(restoStory);
@@ -51,20 +83,6 @@ function Home() {
       }
     });
 
-	// -------- Anim Carroussel ------
-
-    // console.log(carroussel);
-
-	window.addEventListener('load', function() {
-		const carroussel = document.querySelector(".slider");
-
-		window.addEventListener("scroll", function () {
-			if (window.scrollY > 830) {
-				carroussel.style.opacity = "1";
-				carroussel.style.left = "0px";
-			}
-		});
-	})
 
 	// -------- Mousemove Burger ---------
 
@@ -107,18 +125,31 @@ function Home() {
     const burgerCarte = document.getElementById("burgerCarte");
     const burger01 = document.querySelectorAll(".burgersChoiceCadre1");
 
+	
     // burgerCarte.innerHTML = ".burger01";
   });
+  function handleEnd() {
+	  console.log('test');
+	  const source = videoRef.current.querySelector('source');
+	  source.setAttribute('src', '/videos/Entry-san-cho-loop.mp4')
+	  videoRef.current.loop = true;
+	  videoRef.current.load();
+	  videoRef.current.play();
+  }
   return (
     <div className="home">
       <div id="homeImage">
+		<video autoPlay muted onEnded={handleEnd} className="homeVideo" ref={videoRef}>
+			<source src="/videos/entry-san-cho.mp4" type="video/mp4" />
+		</video>
+		<img className="burgerPng" src="/img/san_cho_background.png" alt="San cho" />
         <div className="mousemove">
-          <img
+          <img className="imgMouseMove"
             src="/icns/San_cho_burger.svg"
             alt="Burger Mexicain Accueil Titi Burger Viande Bio Livraison Rapide Restaurant Paris"
           />
         </div>
-        <h1>San Cho de Cuba! </h1>
+        <h1 className="sanChoDeCuba">San Cho de Cuba! </h1>
       </div>
       <main>
         <div className="banniere">
@@ -128,11 +159,12 @@ function Home() {
         </div>
 
         <section className="restoStory">
-          <div className="leResto">
+          <Link to="/LeResto" className="leResto"><div >
             <h2 id="TitleLeResto">Le Resto</h2>
           </div>
+		  </Link>
           <div className="titiStory">
-            <h2 className="titiStoryTitle">Titi Story</h2>
+            <h2 className="titiStoryTitle">San Cho Story</h2>
             <p className="titiStory">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, cum.
               Quisquam omnis doloribus aspernatur, ipsam dolor nesciunt dolore
@@ -177,14 +209,17 @@ function Home() {
         <section className="actus">
           <h2 className="actusBigTitle">Actus</h2>
           <div className="actusSub">
-            <div className="actus1">
-              <img
-                className="imageActus1"
-                src="/img/Man_with_a_hat.jpg"
-                alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
-              />
-              <h2 className="actusTitle">La Recette des anciens</h2>
-            </div>
+			<Link className="actusAntiUnderline" to="/laRecetteDesAnciens">
+				<div className="actus1">
+					<img
+						className="imageActus1"
+						src="/img/Man_with_a_hat.jpg"
+						alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
+					/>
+					<h2 className="actusTitle">La Recette des anciens</h2>
+				</div>
+			</Link>
+			<Link className="actusAntiUnderline" to="/notreGuacamoleAuCactus">
             <div className="actus1">
               <img
                 className="imageActus2"
@@ -193,6 +228,8 @@ function Home() {
               />
               <h2 className="actusTitle">Notre Guacamole au Cactus</h2>
             </div>
+			</Link>
+			<Link className="actusAntiUnderline" to="/PourquoiCestBonQuandCaPique">
             <div className="actus1">
               <img
                 className="imageActus3"
@@ -203,14 +240,15 @@ function Home() {
                 Pourquoi "c'est bon quand ça pique"?
               </h2>
             </div>
+			</Link>
           </div>
         </section>
-
+		<Outlet/>
         <section>
           <div className="newsletterSection">
             <div className="newsletter">
               <div className="newsletter01">
-                Des offres chaque semaine sur San-Cho en t'inscrivant à la
+                Des offres chaque semaine sur San Cho en t'inscrivant à la
                 NewsLetter
               </div>
               <div className="newsletter02">

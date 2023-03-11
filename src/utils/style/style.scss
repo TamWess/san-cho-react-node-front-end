@@ -5,7 +5,7 @@
 }
 body {
 	overflow-x: hidden;
-	* {
+	>* {
 		z-index: 2;
 	}
 }
@@ -26,6 +26,7 @@ body {
 	}
 	
 	h1{
+		right: 600px;
 		font-family: "Changa-One";
 		color: rgb(0, 0, 0);
 		margin-bottom: 40px;
@@ -33,7 +34,7 @@ body {
 		padding-left: 20px;
 		top: 170px;
 		font-size: 75px;
-		text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0,0,0,0.4); 
+		text-shadow: 1px 3px 4px #33333360, -1px -1px 2px rgba(0,0,0,0.4); 
 		transition: 1s;
 		h1:hover{
 			padding-bottom: 30px;
@@ -58,14 +59,32 @@ body {
 	/*Boutons Click and Collect - Livraison*/
 	
 	#homeImage{
-		right: 400px;
 		padding-top: 100px;
 		width: 100%;
 		height: 520px;
-		background: url(../../../public/img/san_cho_background.png) no-repeat;
-		background-size: cover;
+		position: relative;
+		img, video {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			z-index: -1;
+			object-fit: cover;
+
+		}
+		.burgerPng img {
+			z-index: 2;
+			transition: 1s;
+		}
 	}
-	
+
+	.mousemove img{
+		z-index: -100;
+	}
+
 	.mousemove{
 		height: 100px;
 		width: 100px;
@@ -110,6 +129,7 @@ body {
 	}
 	
 	.leResto{
+		text-decoration: none;
 		margin: auto;
 		outline: solid 4px rgb(0, 0, 0);
 		box-shadow: 5px 5px 10px #88888869;
@@ -127,12 +147,14 @@ body {
 	}
 	
 	.titiStory{
+		font-family: "Lato";
 		margin: auto;
 		margin-top: 4px;
 		height: fit-content;
 		padding-top: 20px;
 		width: 39%;
 		outline: solid 4px rgb(0, 0, 0);
+		background: rgb(255, 255, 255);
 	}
 	
 	.titiStoryTitle{
@@ -146,9 +168,11 @@ body {
 		width: 90%;
 		text-align: center;
 		outline: none;
+		
 	}
 	
 	.lireLaSuite{
+		font-family: "Lato";
 		margin: auto;
 		padding-top: 35px;
 		padding-bottom: 7px;
@@ -174,7 +198,6 @@ body {
 		display: flex;
 		justify-content: space-around;
 		flex-wrap: wrap;
-		
 	}
 	
 	.nosBurgersTitle{
@@ -193,6 +216,7 @@ body {
 	}
 	
 	.nosBurgersText{
+		font-family: "Lato";
 		padding-top: 30px;
 		margin: 0 25px;
 	}
@@ -221,6 +245,10 @@ body {
 		background: url(../../../public/img/Menu-background-pattern.jpg) no-repeat;
 		background-size: cover;
 	}
+
+	.actusAntiUnderline{
+		text-decoration: none;
+	}
 	
 	.actusBigTitle{
 		color: black;
@@ -235,11 +263,12 @@ body {
 		margin-bottom: 30px;
 		text-align: center;
 		transition: 0.5s;
+		&:hover{
+			font-size: 21px;
+		}
 	}
 	
-	.actusTitle:hover{
-		font-size: 21px;
-	}
+	
 	
 	.actusSub{
 		padding-bottom: 20px;
@@ -256,10 +285,10 @@ body {
 		width: 300px;
 		height: 300px;
 		transition: 0.7s;
-	}
-	
-	.imageActus1:hover, .imageActus2:hover, .imageActus3:hover{
-		filter: brightness(130%);
+		&:hover{
+			outline: solid 4px rgb(0, 0, 0);
+			filter: brightness(130%);
+		}
 	}
 	
 	.newsletter{
@@ -393,7 +422,7 @@ body {
 			padding-left: 28px;
 			top: 436px;
 			font-size: 47px;
-			text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0,0,0,0.4); 
+			text-shadow: 1px 3px 4px #33333345, -1px -1px 2px rgba(0,0,0,0.4); 
 			transition: 1s;
 		}
 		
@@ -420,7 +449,7 @@ body {
 		.titiStory {
 			width: 100%;
 		}
-		
+
 		.nosBurgerSection {
 			align-items: center;
 			flex-direction: column;
