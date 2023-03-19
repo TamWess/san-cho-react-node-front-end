@@ -1,0 +1,326 @@
+/*Titi Burger*/
+
+@font-face {
+    font-family: After Smile;
+    src: url(../TitiBurger/assets/Typo/AfterSmileRegular-K7M3y.otf);
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/******Story*****/
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: rgb(31, 31, 31);
+    padding: 16px 40px 0 15px;
+    font-family: After Smile;
+    font-size: 45px;
+    text-shadow: 1px 3px 4px rgba(57, 57, 57, 0.27), -1px -1px 2px rgba(0,0,0,0.4); 
+    transition: 0.5s;
+}
+
+h1:hover{
+    color: rgb(255, 238, 0);
+}
+
+.selectionMenu{
+    padding-top: 78px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 585px;
+    background: url(assets/img/san_cho_accueil.jpg) no-repeat;
+    background-size: cover;
+}
+
+.menuImage{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 10px #88888869;
+    border-radius: 50px 0 50px 0;
+    width: 97%;
+    height: 94%;
+	background: url(/assets/img/Menu-background-pattern.jpg);
+    outline: solid 5px rgb(255, 225, 0);
+    background-size: cover;
+}
+
+.choisissezVotreBurger{
+    width: 50%;
+    height: 12%;
+}
+
+.filAriane{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    padding-right: 6%;
+    width: 44%;
+    height: 12%;
+}
+
+.arianeSelectedBurger, .arianeSelectedAccompagnement, .arianeSelectedBoisson, .arianeSelectedDessert{
+    position: relative;
+    border-radius: 10px;
+    outline: solid 4px rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    background: rgb(184, 184, 184);
+    background: url(/assets/img/Burger_Le_Gros_San_Cho.jpg);
+    background-size: contain;
+    transition: 0.5s;
+}
+
+.arianeSelectedAccompagnement{
+    background: url(/assets/img/Frites_ondulees.jpg);
+    background-size: contain;
+}
+
+.arianeSelectedBoisson{
+    background: url(/assets/img/Bouteille_d_eau.jpg);
+    background-size: contain;
+}
+
+.arianeSelectedDessert{
+    background: url(/assets/img/dessert_tiramisu.png);
+    background-size: contain;
+}
+
+.arianeSelectedBurger:hover{
+    border-radius: 10px;
+    outline: solid 4px rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+}
+
+.arianeSelectedBoisson:hover{
+    border-radius: 10px;
+    outline: solid 4px rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+}
+
+.arianeVide{
+    position: relative;
+    border-radius: 10px;
+    outline: solid 4px rgb(42, 42, 42);
+    width: 40px;
+    height: 40px;
+    background: rgb(184, 184, 184);
+}
+
+.arianeFil{
+    padding-bottom: 24px;
+    width: 45px;
+    height: 45px;
+    background: url(assets/img/arianeFil_black.png);
+}
+
+.arianeFilBlanc{
+    padding-bottom: 24px;
+    width: 45px;
+    height: 45px;
+    background: url(/assets/img/arianeFil.png)
+
+}
+
+.line{
+    position: relative;
+    height:2px;
+    width: 94%;
+    background: rgb(143, 143, 143);
+}
+
+
+.encadrementDiptique{
+    display: flex;
+    flex-wrap: wrap;
+    height: 64%;
+    width: 100%;
+}
+    
+.burgersChoiceCadre1{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 49%;
+}
+
+.burgersChoiceCadre2{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 49%;
+}
+
+
+.burgerGrosSanCho{
+    padding-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 28%;
+}
+
+.burgerGrosSanchoImg img{
+    position: relative;
+    border-radius: 20px;
+    width: 120px;
+    height: 106px;
+    background: rgb(255, 255, 255, 0.75);
+    outline: solid 4px rgb(68, 68, 68);
+    transition: 0.5s;
+}
+
+.burgerGrosSanchoImg img:hover{
+    outline: solid 5px rgb(255, 255, 255);
+    width: 127px;
+    height: 110px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+#burger-1:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+#burger-2:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+#burger-3:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+#burger-4:checked + label .burgerGrosSanchoImg img {
+    outline-color: white;
+}
+
+h2{
+    font-weight: bold;
+    padding-right: 75px;
+    color: rgb(22, 22, 22);
+    text-align: center;
+    font-size: 17px;
+}
+
+.descriptionProduit{
+    margin-top:14px;
+    padding: 7px 0 0 15px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(255, 255, 255, 0.75);
+    outline: solid 4px rgb(68, 68, 68);
+    width: 60%;
+    height: 72%;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.encadrementDiptique p{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.boutonSuivant{
+        position: relative;
+        top: -5%;
+        left: 80%;
+        text-align: right;
+        padding: 30px;
+        transition: 0.5s;
+}
+    
+    
+.boutonSuivant a:hover{
+        color: rgb(255, 191, 0);
+        outline: solid 3px rgb(255, 191, 0);
+}
+
+
+
+/******Banniere*****/
+
+.banniere{
+    box-shadow: 5px 5px 10px #88888869;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background: url(assets/img/Banniere_san_cho_01.jpg);
+}
+
+.divBanniere{
+    font-size: 40px;
+}
+
+
+/*******Actus*******/
+
+.actus{
+    width: 100%;
+    height: 440px;
+    background: url(assets/img/Banniere_San_Cho_02.jpg) no-repeat;
+    background-size: cover;
+}
+
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 415px;
+    background: url(assets/img/Banniere_San-Cho_Dark.jpg) repeat;
+    transition: 1.5s;
+}
+
+
+.footerDiv01, .footerDiv02, .footerDiv04, .footerDiv05{
+    color: white;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 62%;
+}
+
+.footerDiv03{
+    color: white;
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    height: 62%;
+    width: 33%
+}
+
+.footerDiv03Text{
+    height: 15%;
+}
+
+.tempGoogleMap {
+    padding: 0 40px 40px 40px;
+    height: 120px;
+    background: white;
+}
+
+.footerDiv05{
+    width: 7%;
+    height: 62%;
+}
+

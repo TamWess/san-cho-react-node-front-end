@@ -1,0 +1,14 @@
+.boutonSuivant {
+  position: relative;
+  top: -5%;
+  left: 80%;
+  text-align: right;
+  padding: 30px;
+  transition: 0.5s;
+  color: rgb(255, 191, 0);
+
+  & button:hover {
+    outline: solid 3px rgb(255, 191, 0);
+  }
+}
+  
