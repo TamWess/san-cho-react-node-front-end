@@ -1,8 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api';
-import "../../utils/style/header.css";
-import "../../utils/style/footer.scss";
+import "./style.scss"
 
 function Template() {
 
@@ -26,7 +25,7 @@ function Template() {
     <>
       <header>
         <div className="container">
-          <Link to="/">
+          <Link className="sizeLogo" to="/">
             <div className="logo">
               <img
                 src="/img/San_Cho_Logo_white.svg"
@@ -40,12 +39,12 @@ function Template() {
           <div className="rollBurger">
             <ul className="textRoll">
               <li className="closeButton">
-                <img src="/assets/icns/close-button.svg" alt="" />
+                <img src="/icns/close-button.svg" alt="" />
               </li>
               <li className="rollSpace01">La carte</li>
-              <li className="rollSpace">San Cho story</li>
-              <li className="rollSpace">Le resto</li>
-              <li className="rollSpace">Actus</li>
+			  <Link to="laSanChoStory"><li className="rollSpace">San Cho story</li></Link>
+			  <Link to="/LeResto"><li className="rollSpace">Le resto</li></Link>
+              <Link to="/actus"><li className="rollSpace">Actus</li></Link>
               <li className="rollSpace">Réserver</li>
             </ul>
           </div>
@@ -73,7 +72,7 @@ function Template() {
                     <Link to="/LeResto">Le resto</Link>
                   </li>
                   <li>
-                    <Link to="">Actus</Link>
+                    <Link to="/actus">Actus</Link>
                   </li>
                   <li>
                     <Link to="">Réserver</Link>

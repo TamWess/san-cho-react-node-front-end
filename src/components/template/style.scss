@@ -1,3 +1,6 @@
+
+// ------- HEADER ------
+
 .container{
     z-index: 10;
     display: flex;
@@ -13,20 +16,27 @@
     transition: 0.3s;
 }
 
+.sizeLogo{
+	width: 5%;
+}
+
 .menuBurger img{
     display: none;
 }
 
 .rollBurger{
     display: none;
+	text-decoration: none !important;
 }
 
 .logo{
+	z-index: 100;
     display: flex;
     padding: 14px 0 0 20px;
-    width: 5%;
+    width: 150%;
     height: 63%;
 }
+
 
 .headerRight{
     flex-direction: row;
@@ -111,11 +121,17 @@ nav{
     width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+
+	.listeNav a{
+			font-size: 15px !important;
+	}
+}
+
+
+
 @media screen and (max-width: 576px) {
 
-    /* .menuBurger{
-        padding: 10px, 10px,0,0;
-    } */
     .menuBurger img{
         padding-top: 15px;
         padding-right: 10px;
@@ -130,7 +146,6 @@ nav{
         width: 100%;
         height: 49px;
         background: rgb(26, 26, 26);
-        /* position: fixed; */
         z-index: 10;
         top: 0px;
         transition: 0.3s;
@@ -144,6 +159,7 @@ nav{
     }
 
     .rollBurger{
+		text-decoration: none !important;
         position: absolute;
         margin-left: 186px;
         border-radius: 15px;
@@ -154,44 +170,142 @@ nav{
         outline: solid 5px rgb(255, 255, 255);
         display: flex;
         align-items: center;
-        /* text-align: center; */
-        /* opacity: 0;
-        left: -30px; */
-        /* position: relative; */
         height: 374px;
         width: 189px;
         opacity: 1;
-        background-color: rgba(255, 215, 0, 0.9);
+        background-color: rgba(255, 200, 0, 0.9);
         transition: 0.5s;
-    }
-    
-    .textRoll{
-        text-decoration: underline;
-        text-decoration-thickness: 1.5px;
-        text-decoration-color:rgba(0, 0, 0, 0.5);
-        padding-left: 10px;
-        padding-bottom: 55px;
-        font-size: 30px;
-        color: black;
+		.textRoll{
+			text-decoration: none !important;
+			transition: 1s;
+			font-family: "Changa-One" !important;
+			padding-left: 10px;
+			padding-bottom: 55px;
+			font-size: 30px;
+			color: #000000d6;
+			.rollSpace .rollSpace01 {
+				margin-top: -16px !important;
+				text-decoration: none !important;
+			}
+   	 	}
     }
 
     .closeButton img{
-        padding-top: 23px;
-        margin-left: 152px;
-        height: 30px;
+        padding-top: 47px;
+		margin-left: 142px;
+		height: 38px;
         filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
     }
 
     .rollSpace{
+		margin-left: 15px !important;
         margin-top: 33px;
     }
     .rollSpace01{
-        margin-top: 10px;
+		margin-left: 15px !important;
+        margin-top: -20px;
     }
 
     .headerRight{
         display: none;
     }
-
-
 }
+
+
+// ------- FOOTER --------
+
+@font-face {
+    font-family: "Changa-One";
+    src: url(../../../public/fonts/ChangaOne-Regular.ttf);
+  }
+
+.footer{
+    font-family: "Changa-One";
+    justify-content: space-around;
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    background: url(../../../public/img/Banniere-san-cho-Dark.jpg) repeat;
+    transition: 1.5s;
+	.footerDiv01, .footerDiv02, .footerDiv03, .footerDiv04, .footerDiv05{
+        font-size: 20px;
+        font-family: "Changa-One";
+        margin-top: 3%;
+        margin-bottom: 3%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footerDiv03 img{
+        align-self: center;
+        height: 30px;
+    }
+
+    .locationLogo img{
+        margin-left: 45%;
+    }
+
+
+    .tempGoogleMap {
+        z-index: 1;
+        padding: 0 40px 40px 40px;
+        height: 120px;
+        background: white;
+    }
+
+    .footerDiv05{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        width: 9%;
+    }
+
+    .footerDiv05 img{
+        height: 33px;
+        filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(183deg) brightness(99%) contrast(97%);
+    }
+}
+
+// ----------Responsive Footer -------------
+
+@media screen and (max-width: 768px) {
+
+	.listeNav a{
+		font-size: 15px !important;
+	}
+	.footerDiv01{
+		margin-left: 15px;
+	}
+	.footerDiv03{
+		margin-left: 25px;
+	}
+	.footer{
+		height: 179px;
+		p{
+			font-size: 16px !important;
+		}
+	}
+}
+
+
+@media screen and (max-width: 576px) {
+	body{
+		overflow-x: hidden !important;
+	}
+	.footer {
+			height: 146px !important;
+		p{
+			margin-left: 10px !important;
+			font-size: 12px !important ;
+		}
+	}
+	.footerDiv05 img{
+		height: 24px !important;
+	}
+}
+
+
+   

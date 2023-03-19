@@ -16,7 +16,7 @@ function PourquoiCaPique() {
 		<>	
 			<div className="pageAnciensActus" >
 				<img
-					className="imageActus1"
+					className="imageBigActus1"
 					src="/img/pourquoi-c-est-bon-quand-ca-pique-san-cho.jpg"
 					alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 				/>

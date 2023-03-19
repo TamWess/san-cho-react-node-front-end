@@ -94,7 +94,6 @@ body {
 		filter: invert(92%) sepia(1%) saturate(0%) hue-rotate(187deg) brightness(89%) contrast(90%);
 		transform: translate(-50%, -50%);
 		position: absolute;
-		
 	}
 	
 	/******Banniere*****/
@@ -133,12 +132,11 @@ body {
 		margin: auto;
 		outline: solid 4px rgb(0, 0, 0);
 		box-shadow: 5px 5px 10px #88888869;
-		border-radius: 50px 0 50px 0;
+		border-radius: 10px 10px 10px 10px;
 		padding-top: 20px;
 		width: 50%;
 		height: 290px;
-		background: rgb(255, 191, 0);
-		background: url(../../../public/img/Fiesta_garden.jpeg) no-repeat;
+		background: url(../../../public/img/Fiesta_garden.jpeg);
 		background-size: cover;
 	}
 	
@@ -153,6 +151,7 @@ body {
 		height: fit-content;
 		padding-top: 20px;
 		width: 39%;
+		border-radius: 10px 10px 10px 10px;
 		outline: solid 4px rgb(0, 0, 0);
 		background: rgb(255, 255, 255);
 	}
@@ -209,7 +208,7 @@ body {
 		padding-bottom: 3%;
 		outline: solid 4px rgb(0, 0, 0);
 		box-shadow: 5px 5px 10px #88888869;
-		border-radius: 40px 0 40px 0;
+		border-radius: 10px 10px 10px 10px;
 		background: rgb(255, 255, 255);
 		width: 50%;
 		height: fit-content;
@@ -258,18 +257,12 @@ body {
 	
 	.actusTitle{
 		color: black;
-		font-size: 20px;
+		font-size: 23px;
 		margin-top: 22px;
 		margin-bottom: 30px;
 		text-align: center;
 		transition: 0.5s;
-		&:hover{
-			font-size: 21px;
-		}
 	}
-	
-	
-	
 	.actusSub{
 		padding-bottom: 20px;
 		width: 100%;
@@ -278,7 +271,6 @@ body {
 		flex-direction: row;
 		justify-content: space-around;
 	}
-	
 	.imageActus1, .imageActus2, .imageActus3{
 		box-shadow: 5px 5px 10px #888888;
 		border-radius: 10px;
@@ -350,13 +342,12 @@ body {
 		padding-left: 10%;
 		height: 17%;
 	}
-	
+
 	.sendButton{
 		margin-right: 1.5%;
 		margin-left: 43.5%;
 		margin-top: 159%;
 		height: 25%;
-		
 	}
 	
 	#emailNewsLetter {
@@ -398,30 +389,171 @@ body {
 			rotate: 0deg;
 		}
 	}
+	.titleNewsletterResp{
+		display: none;
+	}
 	
-	
-	// --------------------------------------------------
-	
-	@media screen and (max-width: 576px) {
-		
-		#homeImage{
-			padding-top: 100px;
-			width: 100%;
-			background: url(../../../public/img/san_cho_accueil-sm.jpg) no-repeat;
-			background-size: cover;
+	// ------------Responsive-----------
+
+	@media screen and (max-width: 768px) {
+		.mousemove img{
+			display: none;
+		}
+		.restoStory{
+			.leResto {
+				height: 233px !important;
+				border-radius: 7px;
+				background: url(../../../public/img/Fiesta_garden-sm.jpg) cover !important;
+			}
 		}
 		
+		#pimentImage{
+			position: relative;
+			left: 144px !important;
+			width: 100% !important;
+			height: 105px;
+			background: url(../../../public/img/Piment_taille_sm.png) no-repeat !important ;
+			
+		}
+		#homeImage{ 
+				.homeVideo{
+				top: 37px;
+				left: -513px;
+				height: 100%;
+				width: 185%;
+				}
+				img{
+				position: absolute;
+				top: 40px;
+				bottom: 0;
+				left: -402px;
+				right: 0;
+				height: 100%;
+				width: 155%;
+				z-index: -1;
+				object-fit: cover;
+				}
+		}
+		h1{
+			top: 0;
+			padding: 0px 0px 0px 26px !important;
+			font-size: 47px !important;
+		}
+		.nosBurgers{
+			border-radius: 7px;
+			.titiStory p{
+			padding-top: 14px;
+			}
+
+			.actus{
+				.actusBigTitle{
+					padding-top: 15px;
+   					padding-bottom: 24px;
+				}
+				.actusSub{
+					height: 284px;
+				}
+				.actusTitle{
+					font-size: 13px;
+				}
+				.imageActus1, .imageActus2, .imageActus3{
+					height: 238px !important;
+					width: 238px !important;
+				}
+			}
+		}
+			
+			.newsletterSection{
+				height: 110px;
+				.newsletter{
+					margin: 40px auto !important;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					width: 78% !important;
+					height: 87px !important;
+				}
+				.titleNewsletterResp{
+					margin-top: 1.5%;
+					height: 48%;
+					font-size: 31px;
+					color: black;
+					display: unset;
+					margin-top: 1.5%;
+					width: 30% !important;
+					
+				}
+				#emailNewsLetter{
+					width: 46% !important;
+					height: 24% !important;
+					margin-top: 6%;
+				}
+			
+				.emailTextInput{
+					color: black;
+					margin-top: 6% !important;
+					height: 40%;
+				}
+			
+				.newsletter01{
+					display: none !important;
+				}
+				.newsletter02{
+					display: none !important;
+				}
+				.newsletter{
+				outline: solid 4px rgb(0, 0, 0);
+				margin-left: 2%;
+				margin-top: 6.3%;
+				width: 57%;
+				height: 26px;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				background-color: #fff;
+				color: #333;
+				font-size: 16px;
+				}
+			
+			}
+	}
+	
+	@media screen and (max-width: 576px) {
+		p{
+			font-size: 15px;
+		}
+		#homeImage{ 
+			img{
+			position: absolute;
+			top: 93px;
+			bottom: 0;
+			left: -568px;
+			right: 0;
+			height: 86%;
+			width: 261%;
+			z-index: -1;
+			object-fit: cover;
+		}
+		.homeVideo{
+			position: absolute;
+			top: 20px;
+			bottom: 0;
+			left: -104px;
+			right: 0;
+			height: 104%;
+			width: 154%;
+			z-index: -1;
+			object-fit: cover;
+		}
+	}
 		.mousemove{
 			display: none;
 		}
-		
+
 		h1{
-			color: aliceblue;
-			margin-bottom: 40px;
+			color: rgb(0, 0, 0);
 			position: relative;
-			padding-left: 28px;
-			top: 436px;
-			font-size: 47px;
+			top: -33px !important;
+			font-size: 44px;
 			text-shadow: 1px 3px 4px #33333345, -1px -1px 2px rgba(0,0,0,0.4); 
 			transition: 1s;
 		}
@@ -437,26 +569,24 @@ body {
 			justify-content: center;
 			text-align: center;
 		}
-		
-		.leResto h2{
-			visibility: hidden;
-		}
-		
 		.leResto {
+			border-radius: 10px 10px 0 0;
 			width: 100%;
+			background: url(../../../public/img/Fiesta_garden-sm.jpg) no-repeat !important;
+			background-size: cover !important;
 		}
-		
 		.titiStory {
+			border-radius: 0 0 7px 7px;
 			width: 100%;
 		}
-
 		.nosBurgerSection {
 			align-items: center;
 			flex-direction: column;
 			text-align: center;
 		}
-		
 		.nosBurgers {
+			margin-bottom: 15px;
+			border-radius: 10px;
 			justify-content: center;
 			align-items: center;
 			display: flex;
@@ -465,44 +595,113 @@ body {
 			width: 93%;
 			height: 30%;
 		}
-		
 		.nosBurgersText{
 			padding-bottom: 35px;
 		}
-		
-		.actusSub{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			height: fit-content;
-			background: url(../../../public/img/Banniere-san-cho-02.jpg) no-repeat;
+		.actus{
+			.actusSub{
+				height: 1012px !important;
+			}
+
+			.actusTitle {
+				font-size: 16px !important;
+			}
+
+			.imageActus1, .imageActus2, .imageActus3{
+				height: 275px !important;
+				width: 275px !important;
+			}
+
+			.actusSub{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: fit-content;
+			}
+
 		}
+
+		.newsletterSection{
+			height: 110px;
+			.newsletter{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				width: 96% !important;
+				height: 87px !important;
+				margin-top: 9.3% !important;
+			}
+			.newsletter01{
+				font-size: 10px;
+				display: none;
+			}
+			.newsletter02{
+				font-size: 10px;
+				text-align: right;
+				padding-left: 20px;
+				width: 20%;
+				display: none;
+			}
+			.newsletter03{
+				font-size: 10px;
+				padding: 20px 10px 0 0;
+				text-align: center;
+				width: 100%;
+			}
+			.titleNewsletterResp{
+				margin-top: 1.5%;
+				width: 0% !important;
+				height: 48%;
+				font-size: 25px;
+				color: black;
+				display: unset;
+			}
+			#emailNewsLetter{
+				width: 70% !important;
+				height: 25% !important;
+				margin-top: 12%;
+			}
 		
-		.newsletter01{
-			font-size: 10px;
-			display: none;
-		}
+			.emailTextInput{
+				color: black;
+				margin-top: 12% !important;
+				height: 40%;
+			}
 		
-		.newsletter02{
-			font-size: 10px;
-			text-align: right;
-			padding-left: 20px;
-			width: 20%;
-		}
-		.newsletter03{
-			font-size: 10px;
-			padding: 20px 10px 0 0;
-			text-align: center;
-			width: 100%;
+			.newsletter01{
+				display: none !important;
+			}
+			.newsletter02{
+				display: none !important;
+			}
+			.newsletter03{
+				margin-left: 3%;
+			}
+		
+			.newsletter{
+			outline: solid 4px rgb(0, 0, 0);
+			margin-left: 2%;
+			margin-top: 6.3%;
+			width: 57%;
+			height: 26px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			background-color: #fff;
+			color: #333;
+			font-size: 16px;
+			}
 		}
 		
 		#pimentImage{
-			width: 100%;
-			height: 75px;
-			background: url(../../../public/img/Piment_taille_sm.png) no-repeat;
-			background-size: cover;
+			position: relative;
+			left: -50px !important;
+			width: 113% !important;
+    		height: 86px !important;
+			background: url(../../../public/img/Piment_taille_sm.png) no-repeat !important;
 		}
-	}
+    }
+	
+}
 	
 	// -------------Page-Click-----------
 	#cadreVide{
@@ -573,13 +772,5 @@ body {
 			}
 			
 		}
-	}
+
 }
-
-
-
-// ------------Page-Story------------
-// @import 'pages/story.scss';
-// @import 'pages/burgers.scss';
-
-

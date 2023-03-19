@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "./style.css";
+import "./style.scss";
 
 function Slideshow() {
   const settings = {
@@ -13,15 +13,21 @@ function Slideshow() {
     dots: true,
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
         },
+		breakpoint: 390,
+		settings: {
+			slidesToShow: 1,
+			slidesToScroll: 2,
+		}
       },
     ],
   };
+  
   return (
     <>
       <Slider className="slider" {...settings}>

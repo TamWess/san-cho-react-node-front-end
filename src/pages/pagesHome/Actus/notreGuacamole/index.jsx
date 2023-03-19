@@ -16,7 +16,7 @@ function NotreGuacamole() {
 		<>	
 			<div className="pageAnciensActus" >
 				<img
-					className="imageActus1"
+					className="imageBigActus1"
 					src="/img/page-guacamole-cactus-san-cho.jpg"
 					alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 				/>

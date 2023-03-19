@@ -1,35 +1,24 @@
 import React, { useEffect, useRef } from "react";
-import { Link, Outlet } from "react-router-dom";
-// import "../../utils/style/base.scss";
+import { Link } from "react-router-dom";
+import "../../utils/style/base.scss";
 import "../../utils/style/style.scss";
 import Slideshow from "../../../src/components/slide/index";
-import "../../utils/style/footer.scss";
-import "../../components/slide/style.css"
-
-
-
-// -----------JS-Classic---------
-
-// ------------------------------ Carroussel ------------------------------
+import "../../components/slide/style.scss"
 
 // ----------REACT-----------
 
 function Home() {
 
-
-
 	const videoRef = useRef();
-  useEffect(() => {
+
+  	useEffect(() => {
 
 // --------- h1 ----------
 
 	const sanChoDeCuba = document.querySelector("h1");
 	sanChoDeCuba.style.right = "0px";
 
-	
-	// -------- Anim Carroussel ------
-	
-	// console.log(carroussel);
+// -------- Anim Carroussel ------
 	
 	window.addEventListener('load', function() {
 		const carroussel = document.querySelector(".slider");
@@ -47,7 +36,7 @@ function Home() {
 // 		burgerEntry.style.left = "0px";
 	
 
-	// ---------Anim Header------
+// ---------Anim Header------
 
     const header = document.querySelector(".container");
 
@@ -83,7 +72,6 @@ function Home() {
       }
     });
 
-
 	// -------- Mousemove Burger ---------
 
     const mousemove = document.querySelector(".mousemove");
@@ -99,34 +87,18 @@ function Home() {
     const closeRoll = document.querySelector(".closeButton");
 
     menuBurger.addEventListener("click", function () {
-      // console.log("okay");
       rollBurger.style.opacity = "1";
       rollBurger.style.left = "0px";
     });
 
     closeRoll.addEventListener("click", function () {
       console.log("okay");
-      // rollBurger.style.opacity = "1"
-      // rollBurger.style.fillystyle = rgba(255, 215, 0, 0.6)
       rollBurger.style.left = "200px";
     });
-
-    // const piment = document.querySelector("#pimentImage");
-
-    // piment.addEventListener("mouseover", function () {
-    //   console.log("waoooh!");
-    //     piment.style.rotate = 25 + "deg";
-    // });
-
-	// piment.addEventListener("mouseleave", function () {
-	//       piment.style.rotate = 0 + "deg";
-	//   });
 
     const burgerCarte = document.getElementById("burgerCarte");
     const burger01 = document.querySelectorAll(".burgersChoiceCadre1");
 
-	
-    // burgerCarte.innerHTML = ".burger01";
   });
   function handleEnd() {
 	  console.log('test');
@@ -237,13 +209,12 @@ function Home() {
                 alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
               />
               <h2 className="actusTitle">
-                Pourquoi "c'est bon quand ça pique"?
+                Pourquoi "c'est bon <br/> quand ça pique"?
               </h2>
             </div>
 			</Link>
           </div>
         </section>
-		<Outlet/>
         <section>
           <div className="newsletterSection">
             <div className="newsletter">
@@ -255,7 +226,10 @@ function Home() {
                 c'est par ici
                 <img src="/Linkssets/icns/Linkrrow-right.svg" alt="" />
               </div>
-              <label for="emailNewsLetter">Email :</label>
+			  {/* ---- Titre Newsletter Responsive ---- */}
+			  <h2 className="titleNewsletterResp">Newsletter</h2>
+			  {/* ---- Titre Newsletter Responsive ---- */}
+              <label className="emailTextInput" for="emailNewsLetter">Email :</label>
               <input type="email" id="emailNewsLetter" name="email" />
               <Link to="#">
                 <img

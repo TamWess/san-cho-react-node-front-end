@@ -16,7 +16,7 @@ function LaSanChoStory() {
 		<>	
 			<div className="pageAnciensActus" >
 				<img
-					className="imageActus1"
+					className="imageBigActus1"
 					src="/img/san-cho-story.jpg"
 					alt="San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 				/>

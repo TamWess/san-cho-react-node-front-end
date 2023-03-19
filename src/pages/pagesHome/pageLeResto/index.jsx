@@ -16,7 +16,7 @@ function LeResto() {
 		<>	
 			<div className="pageAnciensActus" >
 				<img
-					className="imageActus1"
+					className="imageBigActus1"
 					src="/img/le-resto-san-cho.jpg"
 					alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 				/>
