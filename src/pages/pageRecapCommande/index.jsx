@@ -5,25 +5,19 @@ import "../pageBurger/san-cho-burgers.scss";
 // import { URL } from "../../utils/constantes/urls-dessert";
 
 function RecapCommande() {
-  const [dessert, setDessert] = useState([]);
-  const [burger, setBurger] = useState([]);
-  const [accompagnement, setAccompagnement] = useState([]);
-  const [boisson, setBoisson] = useState([]);
-	const [chosenProduct, setChosenProduct] = useState();
-	const [priceChosen, setPriceChosen] = useState ();
+	const [priceChosen, setPriceChosen] = useState(0);
 
-	useEffect(() => {
+	useEffect(
+    () => {
+      const totalPrice = ['burger', 'accompagnement', 'boisson', 'dessert']
+        .map(name => JSON.parse(localStorage.getItem(name)))
+        .map((product) => Number(product?.price?.$numberDecimal || 0))
+        .reduce((a, b) => a + b, 0)
 
-		setDessert(JSON.parse(localStorage.getItem('burger')))
-		setBurger(JSON.parse(localStorage.getItem('accompagnement')))
-		setBoisson(JSON.parse(localStorage.getItem('boisson')))
-		setAccompagnement(JSON.parse(localStorage.getItem('dessert')))
-
+      setPriceChosen(totalPrice)
     },
     []
   );
-
-//   setPriceChosen(parseFloat(burger?.price.$numberDecimal) + parseFloat(accompagnement?.price.$numberDecimal) + parseFloat(boisson?.price.$numberDecimal) + parseFloat(dessert?.price?.$numberDecimal))
 	
   return (
     <div className="burger">
@@ -45,10 +39,31 @@ function RecapCommande() {
           </div>
           <div className="line"></div>
           <div className="encadrementDiptique">
-            {/* {desserts.map((item) => (
+
+			{/* ----------- Test Recap ----------- */}
+
+			<div className="burgersChoiceCadre1">
+                  <input className="burgerInput" type="radio" name="burger" id={localStorage._id} value={localStorage._id} />
+                  <label className="burgerGrosSanCho" htmlFor={localStorage.burger._id}>
+                    <div className="burgerGrosSanchoImg">
+                      <img src={localStorage.burger.image}></img>
+                    </div>
+                    <div className="descriptionProduit">
+						<div className="namePrice"> 
+							<h2 className="name">{localStorage.burger.name}</h2>
+							<h2 className="price">{localStorage.burger.price.$numberDecimal} €</h2>
+						</div>
+                        <p>{localStorage.burger.description}</p>
+                    </div>
+                  </label>
+                </div>
+
+				{/* ---------- Fin Test Recap --------- */}
+{/* 
+            {localStorage((item) => (
               <React.Fragment key={item._id}>
                 <div className="burgersChoiceCadre1">
-                  <input className="burgerInput" onChange={handleChange} type="radio" name="dessert" id={item._id} value={item._id} />
+                  <input className="burgerInput" type="radio" name="dessert" id={item._id} value={item._id} />
                   <label className="burgerGrosSanCho" htmlFor={item._id}>
                     <div className="burgerGrosSanchoImg">
                       <img src={item.image}></img>
