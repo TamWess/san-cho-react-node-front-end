@@ -1,0 +1,50 @@
+.pageActusClass {
+  margin-top: 60px;
+  height: 477px;
+  display: flex;
+  flex-direction: column;
+  background: url(../../../../../public/img/Menu-background-pattern.jpg) no-repeat;
+  background-size: cover;
+}
+.pageActusClass .actusAntiUnderline {
+  text-decoration: none;
+}
+.pageActusClass .actusBigTitle {
+  margin: auto;
+  font-family: "Changa-One";
+  color: black;
+  font-size: 50px;
+  padding-top: 23px;
+  padding-bottom: 45px;
+}
+.pageActusClass .actusTitle {
+  font-family: "Changa-One";
+  color: black;
+  font-size: 20px;
+  margin-top: 22px;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: 0.5s;
+}
+.pageActusClass .actusTitle:hover {
+  font-size: 21px;
+}
+.pageActusClass .actusSub {
+  padding-bottom: 20px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.pageActusClass .imageActus1, .pageActusClass .imageActus2, .pageActusClass .imageActus3 {
+  box-shadow: 5px 5px 10px #888888;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  transition: 0.7s;
+}
+.pageActusClass .imageActus1:hover, .pageActusClass .imageActus2:hover, .pageActusClass .imageActus3:hover {
+  outline: solid 4px rgb(0, 0, 0);
+  filter: brightness(130%);
+}/*# sourceMappingURL=style.css.map */

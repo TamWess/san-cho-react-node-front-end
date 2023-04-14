@@ -1,0 +1,295 @@
+.container {
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  background: rgb(26, 26, 26);
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  transition: 0.3s;
+}
+
+.sizeLogo {
+  width: 5%;
+}
+
+.menuBurger img {
+  display: none;
+}
+
+.rollBurger {
+  display: none;
+  text-decoration: none !important;
+}
+
+.logo {
+  z-index: 100;
+  display: flex;
+  padding: 14px 0 0 20px;
+  width: 150%;
+  height: 63%;
+}
+
+.headerRight {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: end;
+  height: 17%;
+  width: 87%;
+}
+
+.bouton {
+  transition: 0.5s;
+  text-align: right;
+  padding: 20px;
+}
+
+.bouton a:hover {
+  color: gold;
+}
+
+.callToAction {
+  font-family: "Roboto Condensed", sans-serif;
+  transition: 0.5s;
+  padding: 4px 23px;
+  background-color: rgb(255, 115, 0);
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.bouton .callToAction {
+  font-size: 17px;
+  margin-left: 16px;
+}
+
+.callToAction:hover {
+  text-align: center;
+  font-size: 18px;
+  background: orangered;
+}
+
+.callToActionRecapCommande {
+  font-family: "Roboto Condensed", sans-serif;
+  transition: 0.5s;
+  padding: 4px 23px;
+  background-color: rgb(255, 115, 0);
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.bouton .callToActionRecapCommande {
+  font-size: 17px;
+  margin-left: 16px;
+}
+
+.callToActionRecapCommande:hover {
+  text-align: center;
+  background: orangered;
+}
+
+/*********Liste Nav*********/
+.listeNav {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: row;
+  justify-content: end;
+  justify-content: space-between;
+  padding-top: 15px;
+  transition: 0.5s;
+}
+
+.listeNav a {
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: row;
+  justify-content: space-between;
+  justify-content: end;
+  padding-left: 50px;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.listeNav a:hover {
+  font-size: 18px;
+  color: gold;
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+  height: 50%;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .listeNav a {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .menuBurger img {
+    padding-top: 15px;
+    padding-right: 10px;
+    height: 25px;
+    display: block;
+    filter: invert(100%) sepia(10%) saturate(7394%) hue-rotate(276deg) brightness(124%) contrast(102%);
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 49px;
+    background: rgb(26, 26, 26);
+    z-index: 10;
+    top: 0px;
+    transition: 0.3s;
+  }
+  .logo {
+    display: flex;
+    padding: 9px 0 0 6px;
+    width: 5%;
+    height: 60%;
+  }
+  .rollBurger {
+    text-decoration: none !important;
+    position: absolute;
+    margin-left: 186px;
+    border-radius: 15px;
+    left: 200px;
+    margin-top: 3px;
+    margin-left: 181px;
+    box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
+    outline: solid 5px rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    height: 374px;
+    width: 189px;
+    opacity: 1;
+    background-color: rgba(255, 200, 0, 0.9);
+    transition: 0.5s;
+  }
+  .rollBurger .textRoll {
+    text-decoration: none !important;
+    transition: 1s;
+    font-family: "Changa-One" !important;
+    padding-left: 10px;
+    padding-bottom: 55px;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.8392156863);
+  }
+  .rollBurger .textRoll .rollSpace .rollSpace01 {
+    margin-top: -16px !important;
+    text-decoration: none !important;
+  }
+  .closeButton img {
+    padding-top: 47px;
+    margin-left: 142px;
+    height: 38px;
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
+  }
+  .rollSpace {
+    margin-left: 15px !important;
+    margin-top: 33px;
+  }
+  .rollSpace01 {
+    margin-left: 15px !important;
+    margin-top: -20px;
+  }
+  .headerRight {
+    display: none;
+  }
+}
+@font-face {
+  font-family: "Changa-One";
+  src: url(../../../public/fonts/ChangaOne-Regular.ttf);
+}
+.footer {
+  font-family: "Changa-One";
+  justify-content: space-around;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  height: 350px;
+  background: url(../../../public/img/Banniere-san-cho-Dark.jpg) repeat;
+  transition: 1.5s;
+}
+.footer .footerDiv01, .footer .footerDiv02, .footer .footerDiv03, .footer .footerDiv04, .footer .footerDiv05 {
+  font-size: 20px;
+  font-family: "Changa-One";
+  margin-top: 3%;
+  margin-bottom: 3%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer .footerDiv03 img {
+  align-self: center;
+  height: 30px;
+}
+.footer .locationLogo img {
+  margin-left: 45%;
+}
+.footer .tempGoogleMap {
+  z-index: 1;
+  padding: 0 40px 40px 40px;
+  height: 120px;
+  background: white;
+}
+.footer .footerDiv05 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 9%;
+}
+.footer .footerDiv05 img {
+  height: 33px;
+  filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(183deg) brightness(99%) contrast(97%);
+}
+
+@media screen and (max-width: 768px) {
+  .listeNav a {
+    font-size: 15px !important;
+  }
+  .footerDiv01 {
+    margin-left: 15px;
+  }
+  .footerDiv03 {
+    margin-left: 25px;
+  }
+  .footer {
+    height: 179px;
+  }
+  .footer p {
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .footer {
+    height: 146px !important;
+  }
+  .footer p {
+    margin-left: 10px !important;
+    font-size: 12px !important;
+  }
+  .footerDiv05 img {
+    height: 24px !important;
+  }
+}/*# sourceMappingURL=style.css.map */

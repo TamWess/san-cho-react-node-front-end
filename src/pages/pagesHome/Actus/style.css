@@ -1,0 +1,180 @@
+.pageAnciensActus {
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: url(../../../../public/img/Menu-background-pattern.jpg);
+}
+.pageAnciensActus .imageActus1, .pageAnciensActus .imageActus2, .pageAnciensActus .imageActus3 {
+  margin: 90px 0 15px 15px;
+  box-shadow: 5px 5px 10px #888888;
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+  transition: 0.7s;
+}
+.pageAnciensActus .imageBigActus1, .pageAnciensActus .imageBigActus2, .pageAnciensActus .imageBigActus3 {
+  border-radius: 10px;
+  margin-top: auto;
+  margin-left: 10px;
+  width: 54% !important;
+  height: 612px !important;
+}
+.pageAnciensActus .diptique {
+  position: relative;
+  left: 700px;
+  margin: 90px 0 15px 15px;
+  width: 37%;
+  transition: 1s;
+}
+.pageAnciensActus .diptique .actusTitle {
+  margin: 0 auto;
+  width: 100%;
+}
+.pageAnciensActus .diptique .subTextAnciens {
+  font-family: "Lato";
+  font-weight: bold;
+}
+.pageAnciensActus .diptique .subTextAnciens .textAnciens {
+  font-weight: initial;
+  font-family: "Lato";
+  margin-top: 45px;
+  font-size: 15px;
+  width: 100%;
+}
+.pageAnciensActus .diptique .banniereActus {
+  position: relative;
+  margin-top: 5%;
+  width: 15%;
+}
+.pageAnciensActus .diptique .banniereActus2 {
+  margin-left: 5%;
+  position: relative;
+  margin-top: 5%;
+  width: 25%;
+}
+.pageAnciensActus .diptique .banniereActus3 {
+  margin-left: 5%;
+  position: relative;
+  margin-top: 5%;
+  width: 25%;
+}
+.pageAnciensActus .diptique .banniereActus4 {
+  margin-left: 5%;
+  position: relative;
+  margin-top: 5%;
+  width: 16%;
+}
+
+@media screen and (max-width: 768px) {
+  .actus {
+    padding-bottom: 15px !important;
+  }
+  .actus .actusBigTitle {
+    padding-top: 15px !important;
+    padding-bottom: 24px !important;
+  }
+  .actus .actusSub {
+    height: 284px !important;
+  }
+  .actus .actusTitle {
+    width: 100% !important;
+    font-size: 16px !important;
+  }
+  .pageAnciensActus {
+    margin-top: 87px;
+  }
+  .pageAnciensActus .imageBigActus1, .pageAnciensActus .imageBigActus2, .pageAnciensActus .imageBigActus3 {
+    width: 97% !important;
+    height: 565px !important;
+    margin: auto;
+  }
+  .imageActus1, .imageActus2, .imageActus3 {
+    width: 240px !important;
+    height: 240px !important;
+  }
+  .diptique {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+  .subTextAnciens .textAnciens {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .subTextAnciens {
+    font-size: 17px !important;
+  }
+  .textAnciens {
+    font-size: 17px;
+    margin-top: 16px !important;
+  }
+  .imageBigActus1, .imageBigActus2, .imageBigActus3 {
+    width: 100% !important;
+    height: 263px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pageActusClass {
+    height: 1212px !important;
+  }
+  .pageActusClass .actusSub {
+    display: flex;
+    flex-wrap: wrap;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .pageActusClass .actusTitle {
+    font-size: 16px !important;
+  }
+  .pageActusClass .imageActus1, .pageActusClass .imageActus2, .pageActusClass .imageActus3 {
+    height: 275px !important;
+    width: 275px !important;
+  }
+  .pageActusClass .actusSub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .pageAnciensActus {
+    margin-top: 60px;
+    margin-bottom: 90px;
+  }
+  .pageAnciensActus .imageBigActus1, .pageAnciensActus .imageBigActus2, .pageAnciensActus .imageBigActus3 {
+    height: 289px !important;
+    width: 100% !important;
+  }
+  p {
+    margin-left: 0px;
+  }
+  .actus {
+    padding-bottom: 0 !important;
+  }
+  .actusSub {
+    height: 1012px;
+  }
+  .actusTitle {
+    font-size: 35px !important;
+  }
+  .actusSub .imageActus1, .actusSub .imageActus2, .actusSub .imageActus3 {
+    height: 276px !important;
+    width: 96% !important;
+  }
+  .actusSub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .imageBigActus1 {
+    width: 30%;
+    height: 150px;
+  }
+  .imageBigActus1, .imageBigActus2, .imageBigActus3 {
+    width: 100% !important;
+    height: 50% !important;
+  }
+}/*# sourceMappingURL=style.css.map */

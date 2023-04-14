@@ -1,107 +1,84 @@
-/* Meyer-reset*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /*Titi Burger*/
-body * {
+body {
+  overflow-x: hidden;
+}
+body > * {
   z-index: 2;
 }
 
+.home {
+  /*Boutons Click and Collect - Livraison*/
+  /******Banniere*****/
+  /******Le Resto*****/
+  /*******Nos Burgers******/
+  /*******Actus*******/
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../../../public/fonts/Lato-Regular.ttf);
+}
 @font-face {
   font-family: "Changa-One";
-  src: url(./assets/fonts/ChangaOne-Regular.ttf);
+  src: url(../../../public/fonts/ChangaOne-Regular.ttf);
 }
 @font-face {
   font-family: "After-Smile";
-  src: url(/assets/fonts/AfterSmile-Regular.otf);
+  src: url(../../../public/fonts/AfterSmile-Regular.otf);
 }
-h1 {
+.home h1 {
+  right: 600px;
   font-family: "Changa-One";
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   margin-bottom: 40px;
   position: relative;
   padding-left: 20px;
-  top: 160px;
+  top: 170px;
   font-size: 75px;
-  text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 1px 3px 4px rgba(51, 51, 51, 0.3764705882), -1px -1px 2px rgba(0, 0, 0, 0.4);
   transition: 1s;
 }
-h1 h1:hover {
+.home h1 h1:hover {
   padding-bottom: 30px;
   font-size: 78px;
   padding: 0px 930px 90px 0;
   color: rgb(255, 238, 0);
 }
-
-h2 {
+.home h2 {
   color: rgb(255, 255, 255);
   font-family: "Changa-One";
   text-align: center;
   font-size: 40px;
 }
-
-body {
+.home body {
   font-family: "Roboto Condensed", sans-serif;
   overflow-x: hidden;
 }
-
-/*Boutons Click and Collect - Livraison*/
-#homeImage {
+.home #homeImage {
   padding-top: 100px;
   width: 100%;
   height: 520px;
-  background: url(/assets/img/san_cho_accueil.jpg) no-repeat;
-  background-size: cover;
+  position: relative;
 }
-
-.mousemove {
+.home #homeImage img, .home #homeImage video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home #homeImage .burgerPng img {
+  z-index: 2;
+  transition: 1s;
+}
+.home .mousemove img {
+  z-index: -100;
+}
+.home .mousemove {
   height: 100px;
   width: 100px;
   left: 50%;
@@ -111,9 +88,8 @@ body {
   transform: translate(-50%, -50%);
   position: absolute;
 }
-
-/******Banniere*****/
-.banniere {
+.home .banniere {
+  font-family: "Lato";
   box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
   display: flex;
   flex-direction: row;
@@ -121,64 +97,62 @@ body {
   align-items: center;
   height: 92px;
   width: 100%;
-  background: url(/assets/img/Banniere_san_cho_01.jpg);
+  background: url(../../../public/img/Banniere_san_cho_01.jpg);
 }
-
-.divBanniere {
+.home .divBanniere {
   font-size: 40px;
 }
-
-/******Le Resto*****/
-.restoStory {
+.home .restoStory {
+  margin-top: 5%;
   z-index: 5 !important;
-  margin: 70px 20px 70px 60px;
   display: flex;
+  justify-content: space-around;
   position: relative;
   right: 1200px;
   opacity: 0;
   transition: 1s;
 }
-
-.leResto {
+.home .leResto {
+  text-decoration: none;
+  margin: auto;
   outline: solid 4px rgb(0, 0, 0);
   box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
-  border-radius: 50px 0 50px 0;
+  border-radius: 10px 10px 10px 10px;
   padding-top: 20px;
   width: 50%;
   height: 290px;
-  background: rgb(255, 191, 0);
-  background: url(/assets/img/Fiesta_garden-m.jpg) no-repeat;
+  background: url(../../../public/img/Fiesta_garden.jpeg);
   background-size: cover;
 }
-
-.TitleLeResto {
+.home .TitleLeResto {
   color: white;
 }
-
-.titiStory {
-  margin-left: 5%;
+.home .titiStory {
+  font-family: "Lato";
+  margin: auto;
   margin-top: 4px;
+  height: -moz-fit-content;
   height: fit-content;
   padding-top: 20px;
   width: 39%;
+  border-radius: 10px 10px 10px 10px;
   outline: solid 4px rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
 }
-
-.titiStoryTitle {
+.home .titiStoryTitle {
   color: black;
   outline: none;
 }
-
-.titiStory p {
+.home .titiStory p {
   padding-top: 34px;
-  margin-left: 27px;
   padding: 15px, 20px, 10px, 20px;
   width: 90%;
   text-align: center;
   outline: none;
 }
-
-.lireLaSuite {
+.home .lireLaSuite {
+  font-family: "Lato";
+  margin: auto;
   padding-top: 35px;
   padding-bottom: 7px;
   display: flex;
@@ -186,107 +160,75 @@ body {
   font-size: 17px;
   font-weight: bold;
 }
-
-.VLine {
+.home .VLine {
   margin-top: 70px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
   width: 93%;
 }
-
-/*******Nos Burgers******/
-.nosBurgerSection {
-  margin: 0px 0px 70px 0px;
+.home .nosBurgerSection {
+  margin-top: 3%;
+  margin-bottom: 5%;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
-
-.nosBurgersTitle {
+.home .nosBurgersTitle {
   padding-top: 3%;
 }
-
-.nosBurgers {
+.home .nosBurgers {
+  margin: auto;
   padding-bottom: 3%;
   outline: solid 4px rgb(0, 0, 0);
   box-shadow: 5px 5px 10px rgba(136, 136, 136, 0.4117647059);
-  border-radius: 40px 0 40px 0;
+  border-radius: 10px 10px 10px 10px;
   background: rgb(255, 255, 255);
-  width: 47%;
+  width: 50%;
+  height: -moz-fit-content;
   height: fit-content;
-  margin-left: 53px;
 }
-
-.nosBurgersText {
+.home .nosBurgersText {
+  font-family: "Lato";
   padding-top: 30px;
   margin: 0 25px;
 }
-
-.carroussel {
-  left: 42px;
-  padding-left: 19px;
+.home .slider {
   opacity: 0;
   left: 1200px;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  padding-top: 2.5%;
-  width: 43%;
   transition: 1s;
 }
-
-.carrousselCadre {
-  margin-left: 21px;
-  width: fit-content;
-}
-
-.slick-next:before, .slick-prev:before {
-  font-family: slick;
-  font-size: 37px;
-  line-height: 1;
-  opacity: 0.75;
-  color: #333;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.image1, .image2, .image3 {
+.home .image1, .home .image2, .home .image3 {
   margin-top: 12px;
   margin-left: -10px;
   width: 189px;
   height: 164px;
   border-radius: 183px;
 }
-
-/*******Actus*******/
-.actus {
+.home .actus {
   outline: solid 4px rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
-  background: url(/assets/img/Menu-background-pattern.jpg) no-repeat;
+  background: url(../../../public/img/Menu-background-pattern.jpg) no-repeat;
   background-size: cover;
 }
-
-.actusBigTitle {
+.home .actusAntiUnderline {
+  text-decoration: none;
+}
+.home .actusBigTitle {
   color: black;
   padding-top: 23px;
   padding-bottom: 45px;
 }
-
-.actusTitle {
+.home .actusTitle {
   color: black;
-  font-size: 20px;
+  font-size: 23px;
   margin-top: 22px;
   margin-bottom: 30px;
   text-align: center;
   transition: 0.5s;
 }
-
-.actusTitle:hover {
-  font-size: 21px;
-}
-
-.actusSub {
+.home .actusSub {
   padding-bottom: 20px;
   width: 100%;
   height: 400px;
@@ -294,20 +236,18 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
-
-.imageActus1, .imageActus2, .imageActus3 {
+.home .imageActus1, .home .imageActus2, .home .imageActus3 {
   box-shadow: 5px 5px 10px #888888;
   border-radius: 10px;
   width: 300px;
   height: 300px;
   transition: 0.7s;
 }
-
-.imageActus1:hover, .imageActus2:hover, .imageActus3:hover {
+.home .imageActus1:hover, .home .imageActus2:hover, .home .imageActus3:hover {
+  outline: solid 4px rgb(0, 0, 0);
   filter: brightness(130%);
 }
-
-.newsletter {
+.home .newsletter {
   font-family: "Changa-One";
   outline: solid 4px rgb(0, 0, 0);
   display: flex;
@@ -315,15 +255,15 @@ body {
   border-radius: 30px;
   width: 80%;
   height: 185px;
-  background: url(/assets/img/Bouton_Click-collect-yellow.jpg);
+  background: url(../../../public/img/Bouton_Click-collect-yellow.jpg);
   margin: 0 auto;
   margin-top: 10%;
   box-shadow: 5px 5px 10px #888888;
 }
-.newsletter .newsletter01 .newsletter02 .newsletter03 {
+.home .newsletter .newsletter01 .newsletter02 .newsletter03 {
   height: 100%;
 }
-.newsletter .newsletter01 {
+.home .newsletter .newsletter01 {
   font-size: 25px;
   display: flex;
   padding-bottom: 1%;
@@ -333,7 +273,7 @@ body {
   padding-left: 35px;
   width: 30%;
 }
-.newsletter .newsletter02 {
+.home .newsletter .newsletter02 {
   font-size: 25px;
   display: flex;
   margin-top: 1%;
@@ -344,7 +284,7 @@ body {
   padding-right: 2%;
   width: 17%;
 }
-.newsletter .newsletter03 {
+.home .newsletter .newsletter03 {
   font-size: 25px;
   display: flex;
   font-family: "Changa-One";
@@ -354,27 +294,24 @@ body {
   text-align: right;
   width: 45%;
 }
-.newsletter label {
+.home .newsletter label {
   margin-left: 1%;
   margin-top: 7%;
   margin-bottom: 3%;
   font-size: 25px;
   font-family: "Changa-One";
 }
-
-.newsletter02 img {
+.home .newsletter02 img {
   padding-left: 10%;
   height: 17%;
 }
-
-.sendButton {
+.home .sendButton {
   margin-right: 1.5%;
   margin-left: 43.5%;
   margin-top: 159%;
   height: 25%;
 }
-
-#emailNewsLetter {
+.home #emailNewsLetter {
   outline: solid 4px rgb(0, 0, 0);
   margin-left: 2%;
   margin-top: 6.3%;
@@ -386,58 +323,206 @@ body {
   color: #333;
   font-size: 16px;
 }
-
-#pimentImage {
+.home #pimentImage {
   width: 100%;
   height: 250px;
-  background: url(/assets/img/Piment_taille_m.png) no-repeat;
+  background: url(../../../public/img/Piment_taille_m.png) no-repeat;
 }
-
-@media screen and (max-width: 576px) {
-  #homeImage {
-    padding-top: 100px;
-    width: 100%;
-    background: url(/assets/img/san_cho_accueil-sm.jpg) no-repeat;
-    background-size: cover;
+.home #pimentImage:hover {
+  animation: gigote infinite 0.2s;
+}
+@keyframes gigote {
+  0% {
+    rotate: 0deg;
   }
-  .mousemove {
+  25% {
+    rotate: 15deg;
+  }
+  75% {
+    rotate: -15deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+.home .titleNewsletterResp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .home .mousemove img {
     display: none;
   }
-  h1 {
-    color: aliceblue;
-    margin-bottom: 40px;
-    position: relative;
-    padding-left: 28px;
-    top: 436px;
-    font-size: 47px;
-    text-shadow: 1px 3px 4px #333, -1px -1px 2px rgba(0, 0, 0, 0.4);
-    transition: 1s;
+  .home .restoStory .leResto {
+    height: 233px !important;
+    border-radius: 7px;
+    background: url(../../../public/img/Fiesta_garden-sm.jpg) cover !important;
   }
-  .divBanniere {
+  .home #pimentImage {
+    position: relative;
+    left: 144px !important;
+    width: 100% !important;
+    height: 105px;
+    background: url(../../../public/img/Piment_taille_sm.png) no-repeat !important;
+  }
+  .home #homeImage .homeVideo {
+    top: 37px;
+    left: -513px;
+    height: 100%;
+    width: 185%;
+  }
+  .home #homeImage img {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: -402px;
+    right: 0;
+    height: 100%;
+    width: 155%;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .home h1 {
+    top: 0;
+    padding: 0px 0px 0px 26px !important;
+    font-size: 47px !important;
+  }
+  .home .nosBurgers {
+    border-radius: 7px;
+  }
+  .home .nosBurgers .titiStory p {
+    padding-top: 14px;
+  }
+  .home .nosBurgers .actus .actusBigTitle {
+    padding-top: 15px;
+    padding-bottom: 24px;
+  }
+  .home .nosBurgers .actus .actusSub {
+    height: 284px;
+  }
+  .home .nosBurgers .actus .actusTitle {
     font-size: 13px;
   }
-  .restoStory {
+  .home .nosBurgers .actus .imageActus1, .home .nosBurgers .actus .imageActus2, .home .nosBurgers .actus .imageActus3 {
+    height: 238px !important;
+    width: 238px !important;
+  }
+  .home .newsletterSection {
+    height: 110px;
+  }
+  .home .newsletterSection .newsletter {
+    margin: 40px auto !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 78% !important;
+    height: 87px !important;
+  }
+  .home .newsletterSection .titleNewsletterResp {
+    margin-top: 1.5%;
+    height: 48%;
+    font-size: 31px;
+    color: black;
+    display: unset;
+    margin-top: 1.5%;
+    width: 30% !important;
+  }
+  .home .newsletterSection #emailNewsLetter {
+    width: 46% !important;
+    height: 24% !important;
+    margin-top: 6%;
+  }
+  .home .newsletterSection .emailTextInput {
+    color: black;
+    margin-top: 6% !important;
+    height: 40%;
+  }
+  .home .newsletterSection .newsletter01 {
+    display: none !important;
+  }
+  .home .newsletterSection .newsletter02 {
+    display: none !important;
+  }
+  .home .newsletterSection .newsletter {
+    outline: solid 4px rgb(0, 0, 0);
+    margin-left: 2%;
+    margin-top: 6.3%;
+    width: 57%;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .home p {
+    font-size: 15px;
+  }
+  .home #homeImage img {
+    position: absolute;
+    top: 93px;
+    bottom: 0;
+    left: -568px;
+    right: 0;
+    height: 86%;
+    width: 261%;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .home #homeImage .homeVideo {
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: -104px;
+    right: 0;
+    height: 104%;
+    width: 154%;
+    z-index: -1;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .home .mousemove {
+    display: none;
+  }
+  .home h1 {
+    color: rgb(0, 0, 0);
+    position: relative;
+    top: -33px !important;
+    font-size: 44px;
+    text-shadow: 1px 3px 4px rgba(51, 51, 51, 0.2705882353), -1px -1px 2px rgba(0, 0, 0, 0.4);
+    transition: 1s;
+  }
+  .home .divBanniere {
+    font-size: 13px;
+  }
+  .home .restoStory {
     margin: 70px 20px 70px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
   }
-  .leResto h2 {
-    visibility: hidden;
+  .home .leResto {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    background: url(../../../public/img/Fiesta_garden-sm.jpg) no-repeat !important;
+    background-size: cover !important;
   }
-  .leResto {
+  .home .titiStory {
+    border-radius: 0 0 7px 7px;
     width: 100%;
   }
-  .titiStory {
-    width: 100%;
-  }
-  .nosBurgerSection {
+  .home .nosBurgerSection {
     align-items: center;
     flex-direction: column;
     text-align: center;
   }
-  .nosBurgers {
+  .home .nosBurgers {
+    margin-bottom: 15px;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -446,39 +531,109 @@ body {
     width: 93%;
     height: 30%;
   }
-  .nosBurgersText {
+  .home .nosBurgersText {
     padding-bottom: 35px;
   }
-  .actusSub {
+  .home .actus .actusSub {
+    height: 1012px !important;
+  }
+  .home .actus .actusTitle {
+    font-size: 16px !important;
+  }
+  .home .actus .imageActus1, .home .actus .imageActus2, .home .actus .imageActus3 {
+    height: 275px !important;
+    width: 275px !important;
+  }
+  .home .actus .actusSub {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: -moz-fit-content;
     height: fit-content;
-    background: url(/assets/img/Banniere_san_cho_02.png) no-repeat;
   }
-  .newsletter01 {
+  .home .newsletterSection {
+    height: 110px;
+  }
+  .home .newsletterSection .newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 96% !important;
+    height: 87px !important;
+    margin-top: 9.3% !important;
+  }
+  .home .newsletterSection .newsletter01 {
     font-size: 10px;
     display: none;
   }
-  .newsletter02 {
+  .home .newsletterSection .newsletter02 {
     font-size: 10px;
     text-align: right;
     padding-left: 20px;
     width: 20%;
+    display: none;
   }
-  .newsletter03 {
+  .home .newsletterSection .newsletter03 {
     font-size: 10px;
     padding: 20px 10px 0 0;
     text-align: center;
     width: 100%;
   }
-  #pimentImage {
-    width: 100%;
-    height: 75px;
-    background: url(/assets/img/Piment_taille_sm.png) no-repeat;
-    background-size: cover;
+  .home .newsletterSection .titleNewsletterResp {
+    margin-top: 1.5%;
+    width: 0% !important;
+    height: 48%;
+    font-size: 25px;
+    color: black;
+    display: unset;
+  }
+  .home .newsletterSection #emailNewsLetter {
+    width: 70% !important;
+    height: 25% !important;
+    margin-top: 12%;
+  }
+  .home .newsletterSection .emailTextInput {
+    color: black;
+    margin-top: 12% !important;
+    height: 40%;
+  }
+  .home .newsletterSection .newsletter01 {
+    display: none !important;
+  }
+  .home .newsletterSection .newsletter02 {
+    display: none !important;
+  }
+  .home .newsletterSection .newsletter03 {
+    margin-left: 3%;
+  }
+  .home .newsletterSection .newsletter {
+    outline: solid 4px rgb(0, 0, 0);
+    margin-left: 2%;
+    margin-top: 6.3%;
+    width: 57%;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+  }
+  .home #pimentImage {
+    position: relative;
+    left: -50px !important;
+    width: 113% !important;
+    height: 86px !important;
+    background: url(../../../public/img/Piment_taille_sm.png) no-repeat !important;
   }
 }
+
+.recapCommande .burger .encadrementDiptique {
+  height: 23% !important;
+}
+.recapCommande .burger .encadrementDiptique .burgerChoiceCadre1 {
+  height: 50% !important;
+}
+
 #cadreVide {
   width: 100%;
   height: 100px;
@@ -492,7 +647,7 @@ body {
   height: 70px;
   display: flex;
   flex-direction: column;
-  background: url(/assets/img/bouton-click-and-collect.jpg);
+  background: url(../../../public/img/bouton-click-and-collect.jpg);
 }
 #clickAndCollect .boutonClickCollect h2 {
   margin: auto;
@@ -506,7 +661,7 @@ body {
   outline: solid 4px rgb(0, 0, 0);
   margin: 2% auto;
   color: #333;
-  background: url(/assets/img/Bouton_Click-collect-white.jpg);
+  background: url(../../../public/img/Bouton_Click-collect-white.jpg);
 }
 
 .squarePath {
@@ -539,11 +694,9 @@ body {
   border-radius: 7px;
   width: 50%;
   height: 150px;
-  background: url(/assets/img/Bouton_Click-collect-yellow.jpg);
+  background: url(../../../public/img/Bouton_Click-collect-yellow.jpg);
 }
 #aCommencer #sectionCommencer .commencer {
   font-size: 60px;
   color: #333;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

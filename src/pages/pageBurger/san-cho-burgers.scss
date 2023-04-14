@@ -16,7 +16,8 @@
 
 /******Story*****/
 
-.burger h1{
+.burger {
+	h1{
 	font-family: "Changa-One";
 	top: 0;
     display: flex;
@@ -26,155 +27,233 @@
     font-size: 55px;
     text-shadow: 1px 3px 4px rgba(57, 57, 57, 0.27), -1px -1px 2px rgba(0,0,0,0.4); 
     transition: 0.5s;
-}
-
-.burger h1:hover{
-    color: rgb(255, 238, 0);
-}
-
-.burger .titreAccompagnement{
-	font-family: "Changa-One";
-	top: 0;
-    display: flex;
-    justify-content: center;
-    color: rgb(31, 31, 31);
-    padding: 17px 40px 0 4%;
-    font-size: 43px;
-    text-shadow: 1px 3px 4px rgba(57, 57, 57, 0.27), -1px -1px 2px rgba(0,0,0,0.4); 
-    transition: 0.5s;
-}
-
-.burger h1:hover{
-    color: rgb(255, 238, 0);
-}
-
-.burger .selectionMenu{
-    padding-top: 78px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 585px;
-    background-size: cover;
-}
-
-.burger .menuImage{
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 5px 5px 10px #88888869;
-    border-radius: 50px 0 50px 0;
-    width: 97%;
-    height: 94%;
-    background: url(../../../public/img/Menu-background-pattern.jpg);
-    outline: solid 5px rgb(255, 225, 0);
-    background-size: cover;
-}
-
-.burger .choisissezVotreBurger{
-    width: 50%;
-    height: 12%;
-}
-
-.burger .filAriane{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    align-items: flex-end;
-    padding-bottom: 20px;
-    padding-right: 6%;
-    width: 44%;
-    height: 12%;
-}
-
-.burger .arianeSelected{
-    position: relative;
-    border-radius: 10px;
-    outline: solid 4px rgb(255, 255, 255);
-    width: 40px;
-    height: 40px;
-    background: rgb(184, 184, 184);
-    transition: 0.5s;
-}
-
-.burger .arianeSelected:hover{
-    border-radius: 10px;
-    outline: solid 4px rgb(255, 255, 255);
-    width: 45px;
-    height: 45px;
-    background: rgb(184, 184, 184);
-
-}
-
-.burger .arianeVide{
-    position: relative;
-    border-radius: 10px;
-    outline: solid 4px rgb(42, 42, 42);
-    width: 40px;
-    height: 40px;
-    background: rgb(184, 184, 184);
-}
-
-.burger .arianeFil{
-    padding-bottom: 24px;
-    width: 45px;
-    height: 45px;
-    background: url(../../../public/img/arianeFil.png);
-}
-
-.burger .line{
-    position: relative;
-    height:2px;
-    width: 94%;
-    background: rgb(143, 143, 143);
-}
-
-.burger .encadrementDiptique{
-	padding-top: 2.5%;
-    display: flex;
-    flex-wrap: wrap;
-    height: 64%;
-    width: 100%;
-}
-    
-.burger .burgersChoiceCadre1{
+	}
+	h1:hover{
+		color: rgb(255, 238, 0);
+	}
+	.titreAccompagnement{
+		font-family: "Changa-One";
+		top: 0;
+		display: flex;
+		justify-content: center;
+		color: rgb(31, 31, 31);
+		padding: 17px 40px 0 4%;
+		font-size: 43px;
+		text-shadow: 1px 3px 4px rgba(57, 57, 57, 0.27), -1px -1px 2px rgba(0,0,0,0.4); 
+		transition: 0.5s;
+	}
+	.selectionMenu{
+		padding-top: 78px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 585px;
+		background-size: cover;
+	}
+	.menuImage{
+		display: flex;
+		flex-wrap: wrap;
+		box-shadow: 5px 5px 10px #88888869;
+		border-radius: 50px 0 50px 0;
+		width: 97%;
+		height: 94%;
+		background: url(../../../public/img/Menu-background-pattern.jpg);
+		outline: solid 5px rgb(255, 225, 0);
+		background-size: cover;
+	}
+	.choisissezVotreBurger{
+		width: 50%;
+		height: 12%;
+	}
+	.filAriane{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: end;
+		align-items: flex-end;
+		padding-bottom: 20px;
+		padding-right: 6%;
+		width: 44%;
+		height: 12%;
+	}
+	.arianeSelected{
+		position: relative;
+		border-radius: 10px;
+		outline: solid 5px rgb(255, 196, 0);
+		width: 40px;
+		height: 40px;
+		background: rgb(184, 184, 184);
+		transition: 0.5s;
+	}
+	.arianeSelected:hover{
+		border-radius: 10px;
+		outline: solid 4px rgb(255, 255, 255);
+		width: 45px;
+		height: 45px;
+		background: rgb(184, 184, 184);
+	}
+	.arianeVide{
+		position: relative;
+		border-radius: 10px;
+		outline: solid 4px rgb(42, 42, 42);
+		width: 40px;
+		height: 40px;
+		background: rgb(184, 184, 184);
+	}
+	.arianeFil{
+		padding-bottom: 24px;
+		width: 45px;
+		height: 45px;
+		background: url(../../../public/img/arianeFil.png);
+	}
+	.line{
+		position: relative;
+		height:2px;
+		width: 94%;
+		background: rgb(143, 143, 143);
+	}
+	.encadrementDiptique{
+		padding-top: 2.5%;
+		display: flex;
+		flex-wrap: wrap;
+		height: 64%;
+		width: 100%;
+	}
+	.burgersChoiceCadre1{
         display: flex;
         flex-wrap: wrap;
         height: 36%;
         width: 49%;
-}
+	}
+	.burgersChoiceCadre2{
+		display: flex;
+		flex-wrap: wrap;
+		height: 36%;
+		width: 49%;
+	}
+	.burgerGrosSanCho{
+		padding-left: 2%;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 28%;
+	}
+	.burgerGrosSanchoImg img{
+		z-index: 9;
+		position: relative;
+		border-radius: 20px 0 0 20px;
+		width: 120px;
+		height: 106px;
+		background: rgb(255, 255, 255, 0.75);
+		outline: solid 4px rgb(68, 68, 68);
+		transition: 0.5s;
+	}
+	.burgerGrosSanchoImg img:hover{
+		outline: solid 5px rgb(255, 196, 0);
+		width: 127px;
+		height: 110px;
+	}
+	h2 {
+		font-family: "Lato";
+		font-weight: bold;
+		padding-right: 75px;
+		color: rgb(22, 22, 22);
+		text-align: center;
+		font-size: 17px;
+	}
+	p{
+		font-family: "Lato";
+	}
+	.descriptionProduit{
+		z-index: 1;
+		padding: 7px 0 0 15px;
+		border-radius: 0 20px 20px 0;
+		display: flex;
+		flex-wrap: wrap;
+		background: rgb(255, 255, 255, 0.75);
+		outline: solid 2.5px rgb(68, 68, 68);
+		width: 60%;
+		background: rgba(255, 255, 255, 0.6);
+	}
+	.namePrice{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+	.name{
+		width: 75%;
+		display: flex;
+	}
+	.price{
+		padding-right: 40px;
+		width: 25%;
+		display: flex;
+		justify-content: end;
+	}
+	.encadrementDiptique p{
+		display: flex;
+		justify-content: center;
+		font-size: 12px;
+	}
+	.boutonSuivant{
+        position: relative;
+        top: -5%;
+        left: 80%;
+        text-align: right;
+        padding: 30px;
+        transition: 0.5s;
+	}
+	.boutonSuivant a:hover{
+        color: rgb(255, 191, 0);
+        outline: solid 3px rgb(255, 191, 0);
+	}
 
-.burger .burgersChoiceCadre2{
-    display: flex;
-    flex-wrap: wrap;
-    height: 36%;
-    width: 49%;
-}
-
-
-.burger .burgerGrosSanCho{
-    padding-left: 2%;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 28%;
-}
-
-.burger .burgerGrosSanchoImg img{
-	z-index: 9;
-    position: relative;
-    border-radius: 20px 0 0 20px;
-    width: 120px;
-    height: 106px;
-    background: rgb(255, 255, 255, 0.75);
-    outline: solid 4px rgb(68, 68, 68);
-    transition: 0.5s;
-}
-
-.burger .burgerGrosSanchoImg img:hover{
-    outline: solid 5px rgb(255, 196, 0);
-    width: 127px;
-    height: 110px;
+	.boutonCommande{
+        position: relative;
+        // top: 0%;
+		left: 178%;
+        text-align: right;
+        padding: 30px;
+        transition: 0.5s;
+	}
+	.boutonCommande a:hover{
+        color: rgb(255, 191, 0);
+        outline: solid 3px rgb(255, 191, 0);
+	}
+	.callToActionBlack{
+		font-family: 'Roboto Condensed', sans-serif;
+		transition: 0.5s;
+		padding: 4px 23px;
+		background-color: rgb(15, 15, 15);
+		border-radius: 4px;
+		color: white;
+		text-decoration: none;
+		font-size: 17px;
+		margin-left: 16px;
+	}
+	.boutonValiderModifications{
+		display: none;
+		position: absolute;
+		top: 75.4%;
+		left: 65%;
+		text-align: right;
+		padding: 30px;
+		transition: 0.5s;
+	}
+	.callToActionBlack:hover{
+		color: white;
+		text-align: center;
+		font-size: 18px;
+		background: rgb(0, 0, 0);
+	}
+	.titleFinalization{
+		font-size: 45px;
+	}
+	.boutonValiderModifications a:hover{
+		color: rgb(14, 14, 14);
+		outline: solid 3px rgb(255, 191, 0);
+	}	
 }
 
 .burger input[type=radio] {
@@ -185,75 +264,11 @@
     outline-color: rgb(255, 196, 0);
 }
 
-.burger h2 {
-	font-family: "Lato";
-    font-weight: bold;
-    padding-right: 75px;
-    color: rgb(22, 22, 22);
-    text-align: center;
-    font-size: 17px;
-}
-
-.burger p{
-	font-family: "Lato";
-}
-
-.burger .descriptionProduit{
-	z-index: 1;
-    padding: 7px 0 0 15px;
-    border-radius: 0 20px 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    background: rgb(255, 255, 255, 0.75);
-    outline: solid 2.5px rgb(68, 68, 68);
-    width: 60%;
-    background: rgba(255, 255, 255, 0.6);
-}
-.burger .namePrice{
-	width: 100%;
-	display: flex;
-	flex-direction: row;
- 
-}
-
-.burger .name{
-	width: 75%;
-	display: flex;
-}
-
-
-.burger .price{
-	padding-right: 40px;
-	width: 25%;
-	display: flex;
-	justify-content: end;
-}
-
-.burger .encadrementDiptique p{
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-}
-
-.burger .boutonSuivant{
-        position: relative;
-        top: -5%;
-        left: 80%;
-        text-align: right;
-        padding: 30px;
-        transition: 0.5s;
-}
-  
-.burger .boutonSuivant a:hover{
-        color: rgb(255, 191, 0);
-        outline: solid 3px rgb(255, 191, 0);
-}
+.burger 
 
 /* -------- paiement -------- */
 
-.burger .titleFinalization{
-	font-size: 45px;
-}
+.burger 
 
 .recapPrice{
 	margin-left: 3%;

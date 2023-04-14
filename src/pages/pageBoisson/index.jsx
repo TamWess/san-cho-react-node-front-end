@@ -1,16 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "../pageBurger/san-cho-burgers.scss";
+import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
 
 import { URL } from "../../utils/constantes/urls-boisson";
 
 function Boisson() {
+  const button = useRef()
   const [boissons, setBoissons] = useState([]);
-	const [chosenProduct, setChosenProduct] = useState();
-	const navigate = useNavigate();
+  const [chosenProduct, setChosenProduct] = useState();
+  const navigate = useNavigate();
 
   useEffect(
     () => {
@@ -24,6 +26,11 @@ function Boisson() {
         console.log(boissons);
       };
       fetchBoissons();
+
+	  if (localStorage.length === 4) {
+		console.log(button)
+		button.current.style.display = "block";
+	  }
     },
     []
 
@@ -31,19 +38,30 @@ function Boisson() {
   );
 
   function handleChange(event) {
-	setChosenProduct(event.target.value);
+    setChosenProduct(event.target.value);
   }
-	
+
   function handleProduct() {
-	if (chosenProduct !== undefined) {
-		fetch('https://titi.startwin.fr/products/' + chosenProduct)
-			.then(res => res.json())
-			.then(function (data) {
-				localStorage.setItem('boisson', JSON.stringify(data));
-				navigate('/dessert');
-			})
-	}
-}
+    if (chosenProduct !== undefined) {
+      fetch("https://titi.startwin.fr/products/" + chosenProduct)
+        .then((res) => res.json())
+        .then(function (data) {
+          localStorage.setItem("boisson", JSON.stringify(data));
+          navigate("/dessert");
+        });
+    }
+  }
+
+  function handleProductRecap() {
+    if (chosenProduct !== undefined) {
+      fetch("https://titi.startwin.fr/products/" + chosenProduct)
+        .then((res) => res.json())
+        .then(function (data) {
+          localStorage.setItem("boisson", JSON.stringify(data));
+          navigate("/recapitulatifCommande");
+        });
+    }
+  }
 
   return (
     <div className="burger">
@@ -52,33 +70,30 @@ function Boisson() {
           <div className="choisissezVotreBurger">
             <h1>Choisissez votre Boisson</h1>
           </div>
-          <div className="filAriane">
-            <div className="arianeSelected"></div>
-            <div className="arianeFil"></div>
-            <div className="arianeVide"></div>
-            <div className="arianeFil"></div>
-            <div className="arianeVide"></div>
-            <div className="arianeFil"></div>
-            <div className="arianeVide"></div>
-            <div className="arianeFil"></div>
-            <div className="arianeVide"></div>
-          </div>
+          <FilAriane/>
           <div className="line"></div>
           <div className="encadrementDiptique">
             {boissons.map((item) => (
               <React.Fragment key={item._id}>
                 <div className="burgersChoiceCadre1">
-                  <input className="burgerInput" onChange={handleChange} type="radio" name="boisson" id={item._id} value={item._id} />
+                  <input
+                    className="burgerInput"
+                    onChange={handleChange}
+                    type="radio"
+                    name="boisson"
+                    id={item._id}
+                    value={item._id}
+                  />
                   <label className="burgerGrosSanCho" htmlFor={item._id}>
                     <div className="burgerGrosSanchoImg">
                       <img src={item.image}></img>
                     </div>
                     <div className="descriptionProduit">
-						<div className="namePrice"> 
-							<h2 className="name">{item.name}</h2>
-							<h2 className="price">{item.price.$numberDecimal} €</h2>
-						</div>
-                        <p>{item.description}</p>
+                      <div className="namePrice">
+                        <h2 className="name">{item.name}</h2>
+                        <h2 className="price">{item.price.$numberDecimal} €</h2>
+                      </div>
+                      <p>{item.description}</p>
                     </div>
                   </label>
                 </div>
@@ -88,8 +103,15 @@ function Boisson() {
               </React.Fragment>
             ))}
           </div>
+		  <div className="boutonValiderModifications" ref={button}>
+			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+			Valider la modification
+			</button>
+		  </div>
           <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">Suivant</button>
+            <button onClick={handleProduct} className="callToAction">
+              Suivant
+            </button>
           </div>
         </div>
       </section>

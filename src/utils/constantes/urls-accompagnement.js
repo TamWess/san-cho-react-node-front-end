@@ -1,3 +1,3 @@
 export const URL = {
-  fetchAccompagnements: "https://titi.startwin.fr/products/type/accompagnement",
+  fetchAccompagnements: "http://localhost:8080/api/accompagnement/get",
 };

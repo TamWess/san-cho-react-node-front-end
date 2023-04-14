@@ -79,6 +79,26 @@
     background: orangered;
 }
 
+.callToActionRecapCommande{
+    font-family: 'Roboto Condensed', sans-serif;
+    transition: 0.5s;
+    padding: 4px 23px;
+    background-color: rgb(255, 115, 0);
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton .callToActionRecapCommande{
+    font-size: 17px;
+    margin-left: 16px;
+}
+
+.callToActionRecapCommande:hover{
+    text-align: center;
+    background: orangered;
+}
+
 /*********Liste Nav*********/
 
 .listeNav{ 

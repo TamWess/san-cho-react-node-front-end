@@ -1,3 +1,3 @@
 export const URL = {
-  fetchDesserts: "https://titi.startwin.fr/products/type/dessert",
+  fetchDesserts: "http://localhost:8080/api/dessert/get",
 };
