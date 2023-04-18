@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../pageBurger/san-cho-burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane";
@@ -11,7 +11,7 @@ import { URL } from "../../utils/constantes/urls-dessert.js";
 function Dessert() {
   const button = useRef()
   const [desserts, setDesserts] = useState([]);
-  const [chosenProduct, setChosenProduct] = useState();
+  const [productId, setProductId] = useState();
   const navigate = useNavigate();
 
   useEffect(
@@ -37,12 +37,14 @@ function Dessert() {
   );
 
   function handleChange(event) {
-    setChosenProduct(event.target.value);
+    if (event.target.checked) {
+		setProductId(event.target.value);
+    }
   }
 
   function handleProduct() {
-    if (chosenProduct !== undefined) {
-      fetch("http://localhost:8080/api/" + chosenProduct)
+    if (productId !== undefined) {
+      fetch("http://localhost:8080/api/dessert/" + productId)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("dessert", JSON.stringify(data));
@@ -52,8 +54,8 @@ function Dessert() {
   }
 
   function handleProductRecap() {
-    if (chosenProduct !== undefined) {
-      fetch("http://localhost:8080/api/" + chosenProduct)
+    if (productId !== undefined) {
+      fetch("http://localhost:8080/api/dessert/" + productId)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("accompagnement", JSON.stringify(data));

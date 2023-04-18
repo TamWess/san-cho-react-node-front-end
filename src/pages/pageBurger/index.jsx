@@ -13,7 +13,7 @@ function Burger() {
 	// let burger = JSON.parse(localStorage.getItem("burger")).image
   const button = useRef()
   const [burgers, setBurgers] = useState([]);
-  const [chosenProduct, setChosenProduct] = useState();
+  const [productId, setProductId] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,8 +27,6 @@ function Burger() {
       console.log(burgers);
     };
     fetchBurgers();
-
-	
 	if (localStorage.length === 4) {
 		console.log(button)
 		button.current.style.display = "block";
@@ -37,28 +35,28 @@ function Burger() {
 
   function handleChange(event) {
     if (event.target.checked) {
-      setChosenProduct(event.target.value);
-    }
-  }
-
-  function handleProductRecap() {
-    if (chosenProduct !== undefined) {
-      fetch("http://localhost:8080/api/" + chosenProduct)
-        .then((res) => res.json())
-        .then(function (data) {
-          localStorage.setItem("burger", JSON.stringify(data));
-          navigate("/recapitulatifCommande");
-        });
+		setProductId(event.target.value);
     }
   }
   
   function handleProduct() {
-    if (chosenProduct !== undefined) {
-      fetch("http://localhost:8080/api/" + chosenProduct)
+    if (productId !== undefined) {
+      fetch("http://localhost:8080/api/burger/" + productId)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("burger", JSON.stringify(data));
           navigate("/accompagnement");
+        });
+    }
+  }
+
+  function handleProductRecap() {
+    if (productId !== undefined) {
+      fetch("http://localhost:8080/api/burger/" + productId)
+        .then((res) => res.json())
+        .then(function (data) {
+          localStorage.setItem("burger", JSON.stringify(data));
+          navigate("/recapitulatifCommande");
         });
     }
   }

@@ -11,7 +11,7 @@ import { URL } from "../../utils/constantes/urls-boisson";
 function Boisson() {
   const button = useRef()
   const [boissons, setBoissons] = useState([]);
-  const [chosenProduct, setChosenProduct] = useState();
+  const [productId, setProductId] = useState();
   const navigate = useNavigate();
 
   useEffect(
@@ -38,12 +38,14 @@ function Boisson() {
   );
 
   function handleChange(event) {
-    setChosenProduct(event.target.value);
+    if (event.target.checked) {
+		setProductId(event.target.value);
+    }
   }
 
   function handleProduct() {
-    if (chosenProduct !== undefined) {
-      fetch("https://titi.startwin.fr/products/" + chosenProduct)
+    if (productId !== undefined) {
+      fetch("http://localhost:8080/api/boisson/" + productId)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("boisson", JSON.stringify(data));
@@ -53,8 +55,8 @@ function Boisson() {
   }
 
   function handleProductRecap() {
-    if (chosenProduct !== undefined) {
-      fetch("https://titi.startwin.fr/products/" + chosenProduct)
+    if (productId !== undefined) {
+      fetch("http://localhost:8080/api/boisson/" + productId)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("boisson", JSON.stringify(data));
