@@ -6,7 +6,7 @@ import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
 
-import { URL } from "../../utils/constantes/urls-dessert.js";
+import { URLDESSERT } from "../../utils/constantes/urls-dessert.js";
 
 function Dessert() {
   const button = useRef()
@@ -18,7 +18,7 @@ function Dessert() {
     () => {
       const fetchDesserts = async () => {
         try {
-          const { data } = await axios.get(URL.fetchDesserts);
+          const { data } = await axios.get(URLDESSERT.fetchDesserts);
           setDesserts(data);
         } catch (error) {
           console.log(error.message());
@@ -101,16 +101,18 @@ function Dessert() {
               </React.Fragment>
             ))}
           </div>
-		  <div className="boutonValiderModifications" ref={button}>
-			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
-			Valider la modification
-			</button>
+		  <div className="boutonsCommandes">
+			<div className="boutonValiderModifications" ref={button}>
+				<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+				Valider la modification
+				</button>
+			</div>
+			<div className="boutonSuivant">
+				<button onClick={handleProduct} className="callToAction">
+				Suivant
+				</button>
+			</div>
 		  </div>
-          <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
-              Suivant
-            </button>
-          </div>
         </div>
       </section>
     </div>

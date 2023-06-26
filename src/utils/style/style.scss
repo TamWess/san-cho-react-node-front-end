@@ -26,6 +26,7 @@ body {
 	}
 	
 	h1{
+		z-index: 5;
 		right: 600px;
 		font-family: "Changa-One";
 		color: rgb(0, 0, 0);
@@ -71,7 +72,7 @@ body {
 			right: 0;
 			height: 100%;
 			width: 100%;
-			z-index: -1;
+			z-index: 1;
 			object-fit: cover;
 
 		}
@@ -99,6 +100,9 @@ body {
 	/******Banniere*****/
 	
 	.banniere{
+		position: relative;
+		z-index: 10;
+		text-align: center;
 		font-family: "Lato";
 		box-shadow: 5px 5px 10px #88888869;
 		display: flex;
@@ -550,6 +554,7 @@ body {
 		}
 
 		h1{
+			z-index: 2;
 			color: rgb(0, 0, 0);
 			position: relative;
 			top: -33px !important;

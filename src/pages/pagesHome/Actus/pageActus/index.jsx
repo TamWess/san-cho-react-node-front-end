@@ -4,9 +4,6 @@ import "./style.scss"
 
 export default function PageActus() {
 
-	useEffect(() => {
-	})
-
 	return(
 		<>
 			<div className="pageActusClass">

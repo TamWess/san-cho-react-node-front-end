@@ -6,7 +6,7 @@ import FilAriane from "../../components/fil Ariane/fil.ariane"
 
 // URL API
 
-import { URL } from "../../utils/constantes/urls-burger";
+import { URLBURGER } from "../../utils/constantes/urls-burger";
 
 function Burger() {
 
@@ -19,7 +19,7 @@ function Burger() {
   useEffect(() => {
     const fetchBurgers = async () => {
       try {
-        const { data } = await axios.get(URL.fetchBurger);
+        const { data } = await axios.get(URLBURGER.fetchBurger);
         setBurgers(data);
       } catch (error) {
         console.log(error.message());
@@ -64,44 +64,10 @@ function Burger() {
   return (
     <div className="burger">
       <section className="selectionMenu">
-        <div className="menuImage">
+	  <div className="menuImage">
           <div className="choisissezVotreBurger">
             <h1>Choisissez votre Burger</h1>
           </div>
-
-		  {/* FIL D ARIANE BUG A RESOUDRE */}
-
-		  {/* <div className="filAriane">
-              <Link to="/burger">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("burger")).image}
-                ></img>
-              </Link>
-              <div className="arianeFil"></div>
-              <Link to="/accompagnement">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("accompagnement")).image}
-                ></img>
-              </Link>
-              <div className="arianeFil"></div>
-              <Link to="/boisson">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("boisson")).image}
-                ></img>
-              </Link>
-              <div className="arianeFil"></div>
-              <Link to="/dessert">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("dessert")).image}
-                ></img>
-              </Link>
-            </div> */}
-
-			{/* ----------------------- */}
 			<FilAriane/>
           <div className="line"></div>
           <div className="encadrementDiptique">
@@ -132,17 +98,19 @@ function Burger() {
               </React.Fragment>
             ))}
           </div>
-		<div className="boutonValiderModifications" ref={button}>
-			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
-			Valider la modification
-			</button>
-		</div>
-          <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
-              Suivant
-            </button>
-          </div>
-        </div>
+		  <div className="boutonsCommandes">
+			<div className="boutonValiderModifications" ref={button}>
+				<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+				Valider la modification
+				</button>
+			</div>
+			<div className="boutonSuivant">
+				<button onClick={handleProduct} className="callToAction">
+				Suivant
+				</button>
+			</div>
+		  </div>
+		  </div>
       </section>
     </div>
   );

@@ -16,7 +16,7 @@
 
 /******Story*****/
 
-.burger {
+.burgerLaCarte {
 	h1{
 	font-family: "Changa-One";
 	top: 0;
@@ -281,19 +281,11 @@
 		font-size: 17px;
 		margin-left: 16px;
 	}
-	.boutonsCommandes{
-		z-index: 100;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		width: 100%;
-	}
 	.boutonValiderModifications{
 		display: none;
-		position: relative;
-		// position: absolute
-		// top: 75.4%;
-		// left: 65%;
+		position: absolute;
+		top: 75.4%;
+		left: 65%;
 		text-align: right;
 		padding: 30px;
 		transition: 0.5s;
@@ -321,11 +313,20 @@
     outline-color: rgb(255, 196, 0);
 }
 
+.burger 
 
 /* -------- paiement -------- */
 
-h2 .recapPrice{
-	margin-left: 50px;
+.burger 
+
+.recapPrice{
+	margin-left: 3%;
+}
+
+.burger .recapBoutonSuivant{
+	position: relative;
+	top: -5%;
+	left: 67%;
 	text-align: right;
 	padding: 30px;
 	transition: 0.5s;
@@ -398,6 +399,15 @@ h2 .recapPrice{
 // --------- RESPONSIVE ---------
 
 @media screen and (max-width: 768px) {
+	.home{
+		overflow-x: hidden;
+		#homeImage{
+			z-index: 3;
+			img{
+				z-index: 3;
+			}
+		}
+	}
 	.titreAccompagnement{
 		padding: 4% 0px 0px 4%!important
 	}
@@ -412,7 +422,7 @@ h2 .recapPrice{
 		width: 66% !important;
 		.name{
 			font-size: 14px !important;
-			width: 63% !important;
+			width: 210% !important;
 		}
 		.price{
 			font-size: 14px !important;
@@ -454,61 +464,15 @@ h2 .recapPrice{
 
 
 @media screen and (max-width: 576px) {
-
-	.burger{
-			height: 950px;
-		.selectionMenu{
-			justify-content: center;
-			width: 96% !important;
-			height: 785px !important;
-			.menuImage{
-				border-radius: 15px !important;
-				height: 830px;
-				.choisissezVotreBurger{
-					height: 5% !important;
-					width: 90% !important;
-					h1{
-						padding: 31px 0px 0px 22px !important;
-						font-size: 27px !important;
-					}
-					.titreAccompagnement{
-						padding: 20px 0px 0px 22px !important;
-					}
-					.choisissezVotreDessert{
-						padding: 29px 0px 0px 9px !important;
-						font-size: 25px !important;
-					}
-				
-				}
-				.filAriane{
-					padding-bottom: 27px;
-					width: 88%;
-					height: 6%;
-				}
-				.encadrementDiptique{
-					.burgersChoiceCadre1{
-					padding-bottom: 30px;
-					height: 17% !important;
-					width: 100% !important;
-					}
-					.descriptionProduit{
-						.name{
-							width: 152% !important;
-							font-size: 13px !important;
-						}
-						.price{
-							font-size: 13px !important;
-							width: 77% !important;
-						}
-					}
-				}
-				.boutonSuivant{
-					top: 0;
-    				left: 0;
-					padding: 14% 0 0 63%;
-				}
-			}
-
+	.burgerLaCarte{
+		margin-top: -70px;
+		.descriptionProduit .name {
+			width: 210%;
 		}
+		.burgersChoiceCadreCarte{
+			padding-bottom: 30px;
+			height: 17% !important;
+			width: 70% !important;
+			}
 	}
 }

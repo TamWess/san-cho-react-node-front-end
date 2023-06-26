@@ -82,19 +82,19 @@ function Home() {
       mousemove.style.top = e.pageY + "px";
     });
 
-    const menuBurger = document.querySelector(".menuBurger");
-    const rollBurger = document.querySelector(".rollBurger");
-    const closeRoll = document.querySelector(".closeButton");
+    // const menuBurger = document.querySelector(".menuBurger");
+    // const rollBurger = document.querySelector(".rollBurger");
+    // const closeRoll = document.querySelector(".closeButton");
 
-    menuBurger.addEventListener("click", function () {
-      rollBurger.style.opacity = "1";
-      rollBurger.style.left = "0px";
-    });
+    // menuBurger.addEventListener("click", function () {
+    //   rollBurger.style.opacity = "1";
+    //   rollBurger.style.left = "0px";
+    // });
 
-    closeRoll.addEventListener("click", function () {
-      console.log("okay");
-      rollBurger.style.left = "200px";
-    });
+    // closeRoll.addEventListener("click", function () {
+    //   console.log("okay");
+    //   rollBurger.style.left = "200px";
+    // });
 
     const burgerCarte = document.getElementById("burgerCarte");
     const burger01 = document.querySelectorAll(".burgersChoiceCadre1");

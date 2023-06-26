@@ -1,51 +1,19 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../pageBurger/san-cho-burgers.scss";
 
-// URL API
-
-import { URL } from "../../utils/constantes/urls-dessert";
-
 function Paiement() {
-  const [desserts, setDesserts] = useState([]);
-  const [chosenProduct, setChosenProduct] = useState();
-  const navigate = useNavigate();
 
-  useEffect(
-    () => {
-      const fetchDesserts = async () => {
-        try {
-          const { data } = await axios.get(URL.fetchDesserts);
-          setDesserts(data);
-        } catch (error) {
-          console.log(error.message());
-        }
-        console.log(desserts);
-      };
-      fetchDesserts();
-    },
-    []
+	  const [priceChosen, setPriceChosen] = useState(0);
 
-    // ----recuperation commande------
-
-    // requete api
-  );
-
-  function handleChange(event) {
-    setChosenProduct(event.target.value);
-  }
-
-  function handleProduct() {
-    if (chosenProduct !== undefined) {
-      fetch("https://titi.startwin.fr/products/" + chosenProduct)
-        .then((res) => res.json())
-        .then(function (data) {
-          localStorage.setItem("dessert", data);
-          navigate("/");
-        });
-    }
-  }
+  useEffect(() => {
+    const totalPrice = ["burger", "accompagnement", "boisson", "dessert"]
+      .map((name) => JSON.parse(localStorage.getItem(name)))
+      .map((product) => Number(product?.price?.$numberDecimal || 0))
+      .reduce((a, b) => a + b, 0);
+    setPriceChosen(totalPrice);
+  }, []);
+  console.log(localStorage.getItem("accompagnement"));
 
   return (
     <div className="burger">
@@ -78,37 +46,8 @@ function Paiement() {
               </h2>
               <img className="promoImage" src="/img/promo_san_cho.png" alt="" />
             </div>
-
-            {/* {desserts.map((item) => (
-              <React.Fragment key={item._id}>
-                <div className="burgersChoiceCadre1">
-                  <input className="burgerInput" onChange={handleChange} type="radio" name="dessert" id={item._id} value={item._id} />
-                  <label className="burgerGrosSanCho" htmlFor={item._id}>
-                    <div className="burgerGrosSanchoImg">
-                      <img src={item.image}></img>
-                    </div>
-                    <div className="descriptionProduit">
-						<div className="namePrice"> 
-							<h2 className="name">{item.name}</h2>
-							<h2 className="price">{item.price.$numberDecimal} €</h2>
-						</div>
-                        <p>{item.description}</p>
-                    </div>
-                  </label>
-                </div>
-              </React.Fragment>
-            ))} */}
           </div>
-          <h2 className="recapPrice">Prix total: {}</h2>
-
-		  {/* -----Ancien bouton SUIVANT----- */}
-
-          {/* <div className="recapBoutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
-              Suivant
-            </button>
-          </div> */}
-		  
+          <h2 className="recapPrice">Prix total: {priceChosen}</h2>
         </div>
       </section>
     </div>

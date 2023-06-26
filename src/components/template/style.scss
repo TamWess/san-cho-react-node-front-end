@@ -26,7 +26,6 @@
 
 .rollBurger{
     display: none;
-	text-decoration: none !important;
 }
 
 .logo{
@@ -36,6 +35,10 @@
     width: 150%;
     height: 63%;
 }
+// .logo a:hover{
+//     outline: solid 10px rgb(255, 255, 255);
+// 	filter: blur();
+// }
 
 
 .headerRight{
@@ -179,52 +182,50 @@ nav{
     }
 
     .rollBurger{
+		display: flex;
+		flex-direction: column;
 		text-decoration: none !important;
         position: absolute;
-        margin-left: 186px;
+        // margin-left: 186px;
         border-radius: 15px;
-        left: 200px;
-        margin-top: 3px;
-        margin-left: 181px;
+        // left: 200px;
+        // margin-top: 3px;
+        // margin-left: 181px;
         box-shadow: 5px 5px 10px #88888869;
         outline: solid 5px rgb(255, 255, 255);
-        display: flex;
         align-items: center;
-        height: 374px;
-        width: 189px;
-        opacity: 1;
+        // height: 374px;
+        // width: 189px;
+        opacity: 0;
         background-color: rgba(255, 200, 0, 0.9);
         transition: 0.5s;
+		right: -500px;
+		top: 20px;
+		padding: 20px;
 		.textRoll{
-			text-decoration: none !important;
+			gap: 20px;
+			display: flex;
+			flex-direction: column;
 			transition: 1s;
 			font-family: "Changa-One" !important;
-			padding-left: 10px;
-			padding-bottom: 55px;
 			font-size: 30px;
 			color: #000000d6;
-			.rollSpace .rollSpace01 {
-				margin-top: -16px !important;
+			a {
 				text-decoration: none !important;
+				color: black;
 			}
    	 	}
     }
 
-    .closeButton img{
-        padding-top: 47px;
-		margin-left: 142px;
-		height: 38px;
-        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
-    }
-
-    .rollSpace{
-		margin-left: 15px !important;
-        margin-top: 33px;
-    }
-    .rollSpace01{
-		margin-left: 15px !important;
-        margin-top: -20px;
-    }
+    .closeButton {
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+		img{
+			height: 38px;
+			filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(324deg) brightness(96%) contrast(104%);
+		}
+	} 
 
     .headerRight{
         display: none;
@@ -268,13 +269,9 @@ nav{
         margin-left: 45%;
     }
 
-
-    .tempGoogleMap {
-        z-index: 1;
-        padding: 0 40px 40px 40px;
-        height: 120px;
-        background: white;
-    }
+	.googleMap{
+		height: 80%;
+	}
 
     .footerDiv05{
         color: white;

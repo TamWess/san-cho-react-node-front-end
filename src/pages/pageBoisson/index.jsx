@@ -6,7 +6,7 @@ import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
 
-import { URL } from "../../utils/constantes/urls-boisson";
+import { URLBOISSON } from "../../utils/constantes/urls-boisson";
 
 function Boisson() {
   const button = useRef()
@@ -18,7 +18,7 @@ function Boisson() {
     () => {
       const fetchBoissons = async () => {
         try {
-          const { data } = await axios.get(URL.fetchBoissons);
+          const { data } = await axios.get(URLBOISSON.fetchBoissons);
           setBoissons(data);
         } catch (error) {
           console.log(error.message());
@@ -99,22 +99,21 @@ function Boisson() {
                     </div>
                   </label>
                 </div>
-
-                {/* {item.description}
-                {item.price.$numberDecimal} */}
               </React.Fragment>
             ))}
           </div>
-		  <div className="boutonValiderModifications" ref={button}>
-			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
-			Valider la modification
-			</button>
+		  <div className="boutonsCommandes">
+			<div className="boutonValiderModifications" ref={button}>
+				<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+				Valider la modification
+				</button>
+			</div>
+			<div className="boutonSuivant">
+				<button onClick={handleProduct} className="callToAction">
+				Suivant
+				</button>
+			</div>
 		  </div>
-          <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
-              Suivant
-            </button>
-          </div>
         </div>
       </section>
     </div>

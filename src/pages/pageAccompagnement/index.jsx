@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../pageBurger/san-cho-burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
 
-import { URL } from "../../utils/constantes/urls-accompagnement.js";
+import { URLACCOMPAGNEMENT } from "../../utils/constantes/urls-accompagnement.js";
 
 function Accompagnement() {
 
@@ -18,7 +18,7 @@ function Accompagnement() {
   useEffect(() => {
     const fetchAccompagnements = async () => {
       try {
-        const { data } = await axios.get(URL.fetchAccompagnements);
+        const { data } = await axios.get(URLACCOMPAGNEMENT.fetchAccompagnements);
         setAccompagnements(data);
       } catch (error) {
         console.log(error.message());
@@ -100,16 +100,18 @@ function Accompagnement() {
               </React.Fragment>
             ))}
           </div>
-		  <div className="boutonValiderModifications" ref={button}>
-			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
-			Valider la modification
-			</button>
+		  <div className="boutonsCommandes">
+			<div className="boutonValiderModifications" ref={button}>
+				<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+				Valider la modification
+				</button>
+			</div>
+			<div className="boutonSuivant">
+				<button onClick={handleProduct} className="callToAction">
+				Suivant
+				</button>
+			</div>
 		  </div>
-          <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
-              Suivant
-            </button>
-          </div>
         </div>
       </section>
     </div>

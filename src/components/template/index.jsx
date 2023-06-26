@@ -1,9 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link, Outlet } from "react-router-dom";
 import {GoogleMap, useJsApiLoader} from '@react-google-maps/api';
 import "./style.scss"
 
 function Template() {
+
+	// ROLL MENU
+
+	
+	
+	useEffect(() => {
+		const closeRoll = document.querySelector(".closeButton");
+		const menuBurger = document.querySelector(".menuBurger");
+    	const rollBurger = document.querySelector(".rollBurger");
+		menuBurger.addEventListener("click", function () {
+			rollBurger.style.opacity = "1";
+			rollBurger.style.right = "20px";
+		  });
+		  closeRoll.addEventListener("click", function () {
+		    console.log("okay");
+		    rollBurger.style.right = "-500px";
+		  });
+	})
 
 
 	const {isLoaded} = useJsApiLoader({
@@ -37,16 +55,16 @@ function Template() {
             <img src="/icns/burger-menu.svg" alt="" />
           </div>
           <div className="rollBurger">
-            <ul className="textRoll">
-              <li className="closeButton">
-                <img src="/icns/close-button.svg" alt="" />
-              </li>
-              <li className="rollSpace01">La carte</li>
-			  <Link to="laSanChoStory"><li className="rollSpace">San Cho story</li></Link>
-			  <Link to="/LeResto"><li className="rollSpace">Le resto</li></Link>
-              <Link to="/actus"><li className="rollSpace">Actus</li></Link>
-              <li className="rollSpace">Réserver</li>
-            </ul>
+			<div className="closeButton">
+			<img src="/icns/close-button.svg" alt="" />
+			</div>
+            <div className="textRoll">
+			  <Link to="/laCarte" className="rollSpace01">La Carte</Link>
+			  <Link to="laSanChoStory" className="rollSpace">San Cho story</Link>
+			  <Link to="/LeResto" className="rollSpace">Le resto</Link>
+              <Link to="/actus" className="rollSpace">Actus</Link>
+			  <Link to="/contact" className="rollSpace">Contact</Link>
+            </div>
           </div>
 
           <div className="headerRight">
@@ -63,7 +81,7 @@ function Template() {
               <nav>
                 <ul className="listeNav">
                   <li>
-                    <Link to="">La carte</Link>
+                    <Link to="/laCarte">La carte</Link>
                   </li>
                   <li>
                     <Link to="laSanChoStory">San Cho story</Link>
@@ -75,7 +93,7 @@ function Template() {
                     <Link to="/actus">Actus</Link>
                   </li>
                   <li>
-                    <Link to="">Réserver</Link>
+                    <Link to="">Contact</Link>
                   </li>
                 </ul>
               </nav>
@@ -105,12 +123,11 @@ function Template() {
               <p>San Cho en région parisienne</p>
             </div>
             <div className="locationLogo"></div>
-			{/* <GoogleMap
+			{/* <GoogleMap 
 				mapContainerStyle={containerStyle}
 				center={center}
 				zoom={10}
 			></GoogleMap> */}
-            {/* <div className="tempGoogleMap"></div> */}
           </div>
           <div className="footerDiv04">
             <p>Contact</p>
