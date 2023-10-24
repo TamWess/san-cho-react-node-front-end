@@ -21,7 +21,7 @@
   display: none;
 }
 
-.rollBurger {
+.rollMenu {
   display: none;
   text-decoration: none !important;
 }
@@ -164,7 +164,7 @@ nav {
     width: 5%;
     height: 60%;
   }
-  .rollBurger {
+  .rollMenu {
     text-decoration: none !important;
     position: absolute;
     margin-left: 186px;
@@ -182,7 +182,7 @@ nav {
     background-color: rgba(255, 200, 0, 0.9);
     transition: 0.5s;
   }
-  .rollBurger .textRoll {
+  .rollMenu .textRoll {
     text-decoration: none !important;
     transition: 1s;
     font-family: "Changa-One" !important;
@@ -191,7 +191,7 @@ nav {
     font-size: 30px;
     color: rgba(0, 0, 0, 0.8392156863);
   }
-  .rollBurger .textRoll .rollSpace .rollSpace01 {
+  .rollMenu .textRoll .rollSpace .rollSpace01 {
     margin-top: -16px !important;
     text-decoration: none !important;
   }
