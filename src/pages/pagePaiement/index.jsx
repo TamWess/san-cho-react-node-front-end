@@ -11,7 +11,6 @@ function Paiement() {
   const [chosenProduct, setChosenProduct] = useState();
   const navigate = useNavigate();
 
-
   useEffect(() => {
 	const totalPrice = ["burger", "accompagnement", "boisson", "dessert"]
 		.map((name) => JSON.parse(localStorage.getItem(name)))
