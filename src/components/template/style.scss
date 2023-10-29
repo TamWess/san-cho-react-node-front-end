@@ -1,5 +1,17 @@
 // ------- HEADER ------
 
+body {
+  overflow-x: hidden !important;
+}
+
+.sizeLogo {
+	position: absolute;
+  display: flex;
+  align-items: end;
+  margin: 10px;
+  width: 130px;
+}
+
 .link {
   text-decoration: none !important;
   color: black;
@@ -18,10 +30,6 @@
   z-index: 10;
   top: 0px;
   transition: 0.3s;
-}
-
-.sizeLogo {
-  width: 5%;
 }
 
 .menuBurger img {
@@ -103,35 +111,18 @@
   border-radius: 4px;
   color: white;
   text-decoration: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .bouton .callToAction {
   font-size: 17px;
   margin-left: 16px;
+  border: none;
 }
 
 .callToAction:hover {
-  text-align: center;
-  font-size: 18px;
-  background: orangered;
-}
-
-.callToActionRecapCommande {
-  font-family: "Roboto Condensed", sans-serif;
-  transition: 0.5s;
-  padding: 4px 23px;
-  background-color: rgb(255, 115, 0);
-  border-radius: 4px;
-  color: white;
-  text-decoration: none;
-}
-
-.bouton .callToActionRecapCommande {
-  font-size: 17px;
-  margin-left: 16px;
-}
-
-.callToActionRecapCommande:hover {
   text-align: center;
   background: orangered;
 }
@@ -179,8 +170,15 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+
   .listeNav a {
     font-size: 15px !important;
+  }
+  .sizeLogo {
+    width: 110px !important;
+  }
+  .logoNav {
+    width: 110px;
   }
 }
 
@@ -204,10 +202,12 @@ nav {
     top: 0px;
     transition: 0.3s;
   }
-
-  .logo {
-    
-    width: 60px
+  .sizeLogo {
+	position: relative !important;
+    width: 70px !important;
+  }
+  .logoNav {
+    width: 70px;
   }
 
   .headerRight {
@@ -297,9 +297,6 @@ nav {
 }
 
 @media screen and (max-width: 576px) {
-  body {
-    overflow-x: hidden !important;
-  }
   .footer {
     height: 146px !important;
     p {

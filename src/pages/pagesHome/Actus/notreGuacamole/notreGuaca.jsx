@@ -1,13 +1,13 @@
 import React from "react";
 import "../../../../utils/style/base.scss"
-import "../../Actus/style.scss";
+import "../../../pagesHome/home.scss";
 import { useEffect } from "react";
 
 function NotreGuacamole() {
 
 	useEffect(() => {
 
-		const diptiqueAnim = document.querySelector(".diptique");
+		const diptiqueAnim = document.querySelector(".diptiqueResto");
 		diptiqueAnim.style.left = "0px";
 
 	})
@@ -15,20 +15,22 @@ function NotreGuacamole() {
 	return (
 		<>
 			<div className="pageAnciensActus" >
-				<img
-					className="imageBigActus1"
-					src="/img/page-guacamole-cactus-san-cho.jpg"
-					alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
-				/>
-				<div className="diptique" >
-					<h1 className="actusTitle">Notre Guacamole au Cactus</h1>
+				<div className="divImageBigActus">
+					<img
+						className="imageBigActus1"
+						src="/img/page-guacamole-cactus-san-cho.jpg"
+						alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
+					/>
+				</div>
+				<div className="diptiqueResto" >
+					<h1 className="actusTitleResto">Notre Guacamole au Cactus</h1>
 					<br />
 					<br />
 					<br />
 
 					<p className="subTextAnciens"><span className="bold">Nos avocats, gorgés de soleil sont directements importés du Mexique.<br />
-					Tous nos autres fruits et légumes sont d'origine France. Vous pouvez dormir sur vos deux oreilles quant à la qualité de nos ingrédients.</span>
-					<br /><br /><br />
+						Tous nos autres fruits et légumes sont d'origine France. Vous pouvez dormir sur vos deux oreilles quant à la qualité de nos ingrédients.</span>
+						<br /><br /><br />
 						<p className="textAnciens">🥑<span className="bold">     Découvrez le Guacamole Green Power chez San Cho Burger !    </span>  🥑<br /><br />
 
 							Chez San Cho Burger, nous croyons que la qualité des ingrédients fait la différence. C'est pourquoi nous sommes fiers de vous présenter notre tout nouveau guacamole, une recette maison préparée avec des avocats, des tomates et des oignons <span className="bold">100% issus de l'agriculture biologique.</span><br /><br />

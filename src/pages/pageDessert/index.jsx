@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "../pageBurger/san-cho-burgers.scss";
+import "../pageBurger/burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
 
-import { URL } from "../../utils/constantes/urls-dessert.js";
+import { URLDesserts } from "../../utils/constantes/urls-dessert.js";
 
 function Dessert() {
   const button = useRef()
@@ -18,7 +18,7 @@ function Dessert() {
     () => {
       const fetchDesserts = async () => {
         try {
-          const { data } = await axios.get(URL.fetchDesserts);
+          const { data } = await axios.get(URLDesserts.fetchDesserts);
           setDesserts(data);
         } catch (error) {
           console.log(error.message());
@@ -69,7 +69,7 @@ function Dessert() {
       <section className="selectionMenu">
         <div className="menuImage">
           <div className="choisissezVotreBurger">
-            <h1 className="choisissezVotreDessert">Choisissez votre Dessert</h1>
+            <h1 className="titreChoisissez">Choisissez votre Dessert</h1>
           </div>
           <FilAriane/>
           <div className="line"></div>
@@ -107,7 +107,7 @@ function Dessert() {
 			</button>
 		  </div>
           <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
+            <button onClick={handleProduct} className="callToActionSuivant">
               Suivant
             </button>
           </div>

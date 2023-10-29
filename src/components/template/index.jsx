@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import "./style.scss"
 
 function Template() {
@@ -18,23 +17,6 @@ function Template() {
 	function rollMenuInvisible() {
 		
 		rollMenuRef.current.style.display = "none"
-	}
-
-	// ------carte google footer----
-	
-	const { isLoaded } = useJsApiLoader({
-		id: 'google-map-script',
-		googleMapsApiKey: "AIzaSyDoeRnemxCI74BFR79V4AG0pCjj4p4Kcdk"
-	})
-	
-	const containerStyle = {
-		width: '100%',
-		height: '120px'
-	}
-	
-	const center = {
-		lat: 48.860160,
-		lng: 2.346190
 	}
 	
 	useEffect(() => {
@@ -54,12 +36,10 @@ function Template() {
 			<header>
 				<div className="container">
 					<Link className="sizeLogo" to="/">
-						<div className="logo">
-							<img
+							<img className="logoNav"
 								src="/img/San_Cho_Logo_white.svg"
 								alt="Logo Entreprise San Cho Sancho Fast food Restaurant Burger Paris Livraison Rapide"
 							/>
-						</div>
 					</Link>
 					<div className="menuBurger" ref={menuBurgerRef}>
 						<img src="/icns/burger-menu.svg" alt="" onClick={rollMenuVisible} />
@@ -71,7 +51,7 @@ function Template() {
 							</li>
 							<Link className="link" to="/" onClick={rollMenuInvisible}><li className="rollSpace01">Accueil</li></Link>
 							<Link className="link" to="/clickandcollect" onClick={rollMenuInvisible}><li className="rollSpace">Click and Collect</li></Link>
-							<Link className="link" to="" onClick={rollMenuInvisible}><li className="rollSpace">La carte</li></Link>
+							<Link className="link" to="/LaCarte" onClick={rollMenuInvisible}><li className="rollSpace">La carte</li></Link>
 							<Link className="link" to="/LeResto" onClick={rollMenuInvisible}><li className="rollSpace">Le resto</li></Link>
 							<Link className="link" to="laSanChoStory" onClick={rollMenuInvisible}><li className="rollSpace">San Cho story</li></Link>
 							<Link className="link" to="/actus" onClick={rollMenuInvisible}><li className="rollSpace">Actus</li></Link>
@@ -92,7 +72,7 @@ function Template() {
 							<nav>
 								<ul className="listeNav">
 									<li>
-										<Link to="">La carte</Link>
+										<Link to="/LaCarte">La carte</Link>
 									</li>
 									<li>
 										<Link to="/LeResto">Le resto</Link>
@@ -125,18 +105,6 @@ function Template() {
 						<p>San Cho Story</p>
 						<p>Le resto</p>
 						<p>Actus</p>
-					</div>
-					<div className="footerDiv03">
-						<div className="footerDiv03Text">
-							<p>San Cho en région parisienne</p>
-						</div>
-						<div className="locationLogo"></div>
-						{/* <GoogleMap
-				mapContainerStyle={containerStyle}
-				center={center}
-				zoom={10}
-			></GoogleMap> */}
-						{/* <div className="tempGoogleMap"></div> */}
 					</div>
 					<div className="footerDiv04">
 						<p>Contact</p>

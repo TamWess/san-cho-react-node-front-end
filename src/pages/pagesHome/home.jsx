@@ -1,17 +1,25 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import "../../utils/style/base.scss";
-import "../../utils/style/style.scss";
-import Slideshow from "../../../src/components/slide/index";
+import { Link, useNavigate } from "react-router-dom";
+import "./home.scss"
+import Slideshow from "../../components/slide/index";
 import "../../components/slide/style.scss"
+
+// link Responsively: http://192.168.1.27:3000/
 
 // ----------REACT-----------
 
 function Home() {
 
 	const videoRef = useRef();
+	const navigate = useNavigate();
+
+
+	function pageNosBurgers() {
+		navigate("/laCarte")
+	}
 
 	useEffect(() => {
+
 
 		// --------- h1 ----------
 
@@ -82,20 +90,6 @@ function Home() {
 			mousemove.style.top = e.pageY + "px";
 		});
 
-		// const menuBurger = document.querySelector(".menuBurger");
-		// const rollMenu = document.querySelector(".rollMenu");
-		// const closeRoll = document.querySelector(".closeButton");
-
-		// menuBurger.addEventListener("click", function () {
-		//   rollMenu.style.opacity = "1";
-		//   rollMenu.style.left = "0px";
-		// });
-
-		// closeRoll.addEventListener("click", function () {
-		//   console.log("okay");
-		//   rollMenu.style.left = "200px";
-		// });
-
 		const burgerCarte = document.getElementById("burgerCarte");
 		const burger01 = document.querySelectorAll(".burgersChoiceCadre1");
 
@@ -114,35 +108,41 @@ function Home() {
 				<video autoPlay muted onEnded={handleEnd} className="homeVideo" ref={videoRef}>
 					<source src="/videos/entry-san-cho.mp4" type="video/mp4" />
 				</video>
-				<img className="burgerPng" src="/img/san_cho_background.png" alt="San cho" />
+				<div className="divSanChoDeCuba">
+					<h1 className="sanChoDeCuba">San Cho de Cuba! 🌶️ </h1>
+				</div>
+				<div className="divImgBurger">
+					<img className="burgerPng" src="/img/san_cho_background_01.png" alt="San cho" />
+				</div>
 				<div className="mousemove">
 					<img className="imgMouseMove"
 						src="/icns/San_cho_burger.svg"
 						alt="Burger Mexicain Accueil Titi Burger Viande Bio Livraison Rapide Restaurant Paris"
 					/>
+
 				</div>
-				<h1 className="sanChoDeCuba">San Cho de Cuba! </h1>
+
 			</div>
 			<main>
 				<div className="banniere">
-					<div className="divBanniere">Livraison rapide</div>
+
 					<div className="divBanniere">Produits 100% BIO</div>
 					<div className="divBanniere">Viande origine France</div>
 				</div>
 
 				<section className="restoStory">
 					<Link to="/LeResto" className="leResto"><div >
-						<h2 id="TitleLeResto">Le Resto</h2>
+						<h2 id="TitleLeResto">Le Resto 🌞</h2>
 					</div>
 					</Link>
 					<div className="titiStory">
-						<h2 className="titiStoryTitle">San Cho Story</h2>
+						<h2 className="titiStoryTitle">San Cho Story 🍅</h2>
 						<p className="titiStory">
 							Dans les rues animées de Paris, un nouveau spot culinaire a vu le jour : <span className="bold">San-cho Burger</span>. <br /><br /><br />
-							Derrière cette innovation, deux passionnés de la cuisine mexicaine.<br /> 
-							Après des mois passés à explorer les marchés locaux du Mexique, à savourer burritos et enchiladas, <span className="bold">ils tombèrent amoureux des ingrédients :</span> le guacamole, le piment et les viandes typiques des burritos.<br />
-							L'idée brillante leur vint en mordant dans un taco : 
-							Dans les rues animées de Paris, un nouveau spot culinaire a vu le jour : <span className="bold">et si on faisait de tout des burgers?</span><br /><br />
+							Derrière cette innovation, deux passionnés de la cuisine mexicaine.<br />
+							Après des mois passés à explorer les marchés locaux du Mexique, à savourer burritos et enchiladas, <span className="bold">ils tombèrent amoureux des ingrédients :</span> le guacamole, le piment et les viandes typiques des burritos.<br /><br />
+							Une idée leur vint en mordant dans un taco :
+							<span className="bold">et si on faisait de tout des burgers?</span><br /><br />
 						</p>
 						<Link to={"laSanChoStory"} className="lireLaSuite">En savoir plus...</Link>
 					</div>
@@ -153,15 +153,15 @@ function Home() {
 				</div>
 
 				<section>
-					<div className="nosBurgerSection">
-						<div className="nosBurgers">
-							<h2 className="titiStoryTitle nosBurgersTitle">Nos Burgers</h2>
+					<div className="nosBurgerSection" onClick={pageNosBurgers}>
+						<div className="nosBurgers" >
+							<h2 className="titiStoryTitle nosBurgersTitle">Nos Burgers 😋</h2>
 							<p className="nosBurgersText">
-								Le plus de nos burgers se trouve dans nos <span className="bold">ingrédients et recettes mexicaines</span>...<br/>
+								Le plus de nos burgers se trouve dans nos <span className="bold">ingrédients et recettes mexicaines</span>...<br /><br />
 								Guacamole, piment mexicain, viande barbacoa... Vous n'aurez jamais gouté un burger pareil.
-								Nos légumes sont tous issues de <span className="bold">l'agriculture biologique</span>, qualité au rendez-vous.<br/>
-								Découvrez notre fameux burger San-Cho, Le Samaritain, Le Ché, El Justo...<br/>
-								<span className="bold">Chaque burger ayant son caractère bien affirmé</span><br/>
+								Nos légumes sont tous issues de <span className="bold">l'agriculture biologique</span>, qualité au rendez-vous. 🍅🌽🥒🌶️<br /><br />
+								Découvrez notre fameux burger San-Cho, Le Samaritain, Le Ché, El Justo...<br />
+								<span className="bold">Chaque burger ayant son caractère bien affirmé</span><br /><br />
 								Nos burgers vous feront voyager et une chose est certaine... Ils ne vous laisseront pas indifférent.
 
 							</p>
@@ -209,13 +209,10 @@ function Home() {
 				<section>
 					<div className="newsletterSection">
 						<div className="newsletter">
+							<h2 className="newsletterTitle">Newsletter</h2>
 							<div className="newsletter01">
 								Des offres chaque semaine sur San Cho en t'inscrivant à la
 								NewsLetter
-							</div>
-							<div className="newsletter02">
-								c'est par ici
-								<img src="/Linkssets/icns/Linkrrow-right.svg" alt="" />
 							</div>
 							{/* ---- Titre Newsletter Responsive ---- */}
 							<h2 className="titleNewsletterResp">Newsletter</h2>
@@ -231,7 +228,9 @@ function Home() {
 							</Link>
 						</div>
 					</div>
-					<div id="pimentImage"></div>
+					<div className="pimentSection">
+						<img className="piment" src="/img/Piment_taille_m.png" alt="" />
+					</div>
 				</section>
 			</main>
 		</div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import "../pageBurger/san-cho-burgers.scss";
+import "../pageBurger/burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
@@ -70,7 +70,7 @@ function Boisson() {
       <section className="selectionMenu">
         <div className="menuImage">
           <div className="choisissezVotreBurger">
-            <h1>Choisissez votre Boisson</h1>
+            <h1 className="titreChoisissez">Choisissez votre Boisson</h1>
           </div>
           <FilAriane/>
           <div className="line"></div>
@@ -111,7 +111,7 @@ function Boisson() {
 			</button>
 		  </div>
           <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
+            <button onClick={handleProduct} className="callToActionSuivant">
               Suivant
             </button>
           </div>

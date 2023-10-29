@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import "../pageBurger/san-cho-burgers.scss";
+import "../pageBurger/burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane";
 
 // URL API
 
-import { URL } from "../../utils/constantes/urls-accompagnement.js";
+import { URLAccompagnements } from "../../utils/constantes/urls-accompagnement.js";
 
 function Accompagnement() {
 
@@ -18,7 +18,7 @@ function Accompagnement() {
   useEffect(() => {
     const fetchAccompagnements = async () => {
       try {
-        const { data } = await axios.get(URL.fetchAccompagnements);
+        const { data } = await axios.get(URLAccompagnements.fetchAccompagnements);
         setAccompagnements(data);
       } catch (error) {
         console.log(error.message());
@@ -65,7 +65,7 @@ function Accompagnement() {
       <section className="selectionMenu">
         <div className="menuImage">
           <div className="choisissezVotreBurger">
-            <h1 className="titreAccompagnement">Choisissez l'Accompagnement</h1>
+            <h1 className="titreChoisissez">Choisissez l'Accompagnement</h1>
           </div>
           <FilAriane/>
           <div className="line"></div>
@@ -106,7 +106,7 @@ function Accompagnement() {
 			</button>
 		  </div>
           <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
+            <button onClick={handleProduct} className="callToActionSuivant">
               Suivant
             </button>
           </div>

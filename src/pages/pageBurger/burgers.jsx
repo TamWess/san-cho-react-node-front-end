@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import "./san-cho-burgers.scss";
+import "./burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane"
 
 // URL API
@@ -66,42 +66,8 @@ function Burger() {
       <section className="selectionMenu">
         <div className="menuImage">
           <div className="choisissezVotreBurger">
-            <h1>Choisissez votre Burger</h1>
+            <h1 className="titreChoisissez">Choisissez votre Burger</h1>
           </div>
-
-		  {/* FIL D ARIANE BUG A RESOUDRE */}
-
-		  {/* <div className="filAriane">
-              <Link to="/burger">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("burger")).image}
-                ></img>
-              </Link>
-              <div className="arianeFil"></div>
-              <Link to="/accompagnement">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("accompagnement")).image}
-                ></img>
-              </Link>
-              <div className="arianeFil"></div>
-              <Link to="/boisson">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("boisson")).image}
-                ></img>
-              </Link>
-              <div className="arianeFil"></div>
-              <Link to="/dessert">
-                <img
-                  className="arianeSelected"
-                  src={JSON.parse(localStorage.getItem("dessert")).image}
-                ></img>
-              </Link>
-            </div> */}
-
-			{/* ----------------------- */}
 			<FilAriane/>
           <div className="line"></div>
           <div className="encadrementDiptique">
@@ -125,7 +91,7 @@ function Burger() {
                         <h2 className="name">{item.name}</h2>
                         <h2 className="price">{item.price.$numberDecimal} €</h2>
                       </div>
-                      <p>{item.description}</p>
+                      <p className="texteBurger">{item.description}</p>
                     </div>
                   </label>
                 </div>
@@ -138,7 +104,7 @@ function Burger() {
 			</button>
 		</div>
           <div className="boutonSuivant">
-            <button onClick={handleProduct} className="callToAction">
+            <button onClick={handleProduct} className="callToActionSuivant">
               Suivant
             </button>
           </div>

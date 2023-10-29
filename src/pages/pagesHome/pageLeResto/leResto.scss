@@ -1,0 +1,84 @@
+.bold {
+  font-weight: bold;
+}
+
+.pageAnciensActus {
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background: url(../../../../public/img/Menu-background-pattern.jpg);
+  margin-top: 35px;
+}
+.actusTitleResto {
+  margin: 30px auto;
+  width: 100%;
+  font-size: 40px;
+}
+.divImageBigActus {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.imageBigActus1,
+.imageBigActus2,
+.imageBigActus3 {
+  border-radius: 10px;
+  width: 90% !important;
+  height: auto !important;
+}
+.diptiqueResto {
+  position: relative;
+  left: 700px;
+  margin: 0px 0 15px 15px;
+  width: 90%;
+  height: fit-content;
+  transition: 1s;
+  .subTextAnciens {
+    font-family: "Lato";
+    .textAnciens {
+      font-weight: initial;
+      font-family: "Lato";
+      font-size: 15px;
+      width: 100%;
+    }
+  }
+  .banniereActus {
+    position: relative;
+    margin-top: 5%;
+    width: 15%;
+  }
+  .banniereActus2 {
+    margin-left: 5%;
+    position: relative;
+    margin-top: 5%;
+    width: 25%;
+  }
+  .banniereActus3 {
+    margin-left: 5%;
+    position: relative;
+    margin-top: 5%;
+    width: 25%;
+  }
+  .banniereActus4 {
+    margin-left: 5%;
+    position: relative;
+    margin-top: 5%;
+    width: 16%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .divImageBigActus {
+    justify-content: left;
+    margin-left: 1vw;
+  }
+  .imageBigActus1,
+  .imageBigActus2,
+  .imageBigActus3 {
+    width: 795px !important;
+    height: auto !important;
+  }
+}

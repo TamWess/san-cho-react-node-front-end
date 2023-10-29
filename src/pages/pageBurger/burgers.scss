@@ -1,0 +1,542 @@
+/*Titi Burger*/
+
+@font-face {
+  font-family: "After Smile";
+  src: url(../../../public/fonts/AfterSmile-Regular.otf);
+}
+@font-face {
+  font-family: "Changa-One";
+  src: url(../../../public/fonts/ChangaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../../../public/fonts/Lato-Regular.ttf);
+}
+
+/******Story*****/
+
+.choisissezVotreBurger {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+}
+.titreChoisissez {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-size: 35px;
+}
+.selectionMenu {
+  position: relative;
+  margin-top: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  background-size: cover;
+}
+.titreCarte {
+  margin: 20px auto 10px auto;
+  position: relative;
+  text-align: center;
+  font-family: "Changa-One";
+  color: rgb(31, 31, 31);
+  font-size: 43px;
+  transition: 0.5s;
+}
+.titreBurgers {
+  position: relative;
+  margin: 0 0 15px 3vw;
+
+  font-family: "Changa-One";
+  color: rgb(31, 31, 31);
+  font-size: 30px;
+  transition: 0.5s;
+}
+.menuImage {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 10px #88888869;
+  border-radius: 50px 0 50px 0;
+  width: 97%;
+  height: fit-content;
+  background: url(../../../public/img/Menu-background-pattern.jpg);
+  outline: solid 5px rgb(255, 225, 0);
+  background-size: cover;
+  margin-bottom: 150px;
+}
+
+.line {
+  margin: 20px auto 20px auto;
+  position: relative;
+  height: 2px;
+  width: 94%;
+  background: rgb(143, 143, 143);
+}
+.lineLittle {
+  margin: 20px 0 20px 0;
+  position: relative;
+  height: 2px;
+  width: 40%;
+  background: rgb(143, 143, 143);
+}
+.encadrementDiptique {
+  padding: 20px 20px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  width: 100%;
+}
+.burgersChoiceCadre1 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 36%;
+  width: 49%;
+}
+.burgersChoiceCadre2 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 36%;
+  width: 49%;
+}
+.burgerGrosSanCho {
+  padding-left: 2%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 28%;
+}
+input{
+	appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.burgerGrosSanCho:hover {
+	.burgerGrosSanchoImg img{
+		outline: solid 5px rgb(255, 196, 0);
+	}
+	.burgerGrosSanCho .descriptionProduit{
+		outline: solid 5px rgb(255, 196, 0);
+	}
+}
+.burgerGrosSanchoImg img {
+  z-index: 9;
+  position: relative;
+  border-radius: 20px 0 0 20px;
+  width: 120px;
+  height: 106px;
+  background: rgb(255, 255, 255, 0.75);
+  outline: solid 4px rgb(68, 68, 68);
+  transition: 0.5s;
+}
+
+.texteCarte {
+  font-family: "Lato";
+}
+.descriptionProduit {
+  font-family: "Lato";
+  z-index: 1;
+  padding: 7px 0 0 15px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  background: rgb(255, 255, 255, 0.75);
+  outline: solid 2.5px rgb(68, 68, 68);
+  width: 60%;
+  background: rgba(255, 255, 255, 0.6);
+}
+.name,
+.price {
+  font-family: "Lato";
+  font-weight: bold;
+  color: rgb(22, 22, 22);
+  text-align: center;
+  font-size: 17px;
+}
+.namePrice {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+.name {
+  width: 65%;
+  display: flex;
+}
+.price {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+}
+.encadrementDiptique p {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.burgerInput:checked + label div {
+  outline-color: rgb(255, 196, 0);
+}
+.burgerInput:checked + label img {
+  outline-color: rgb(255, 196, 0);
+}
+
+// --------- RESPONSIVE ---------
+
+@media screen and (max-width: 950px) {
+  .encadrementDiptique {
+    flex-direction: column !important;
+  }
+  .burgersChoiceCadre1 {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+	.titreChoisissez {
+		font-size: 30px !important;
+	  }
+  .titreAccompagnement {
+    padding: 4% 0px 0px 4% !important;
+  }
+  .titreCarte {
+    justify-content: center;
+    color: rgb(31, 31, 31);
+    padding: 31px 0px 0px 0 !important;
+  }
+  .descriptionProduit {
+    width: 66% !important;
+  }
+  .texteCarte {
+    font-size: 9px !important;
+  }
+
+  .burgerGrosSanchoImg img {
+    z-index: 9;
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    width: 90px !important;
+    height: 90px !important;
+    background: rgb(255, 255, 255, 0.75);
+    outline: solid 4px rgb(68, 68, 68);
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .titreChoisissez {
+    font-size: 27px !important;
+  }
+
+  .titreAccompagnement {
+    padding: 20px 0px 0px 22px !important;
+  }
+  .choisissezVotreDessert {
+    padding: 29px 0px 0px 9px !important;
+    font-size: 25px !important;
+  }
+
+  .burgersChoiceCadre1 {
+    padding-bottom: 30px;
+    height: 17% !important;
+    width: 100% !important;
+  }
+}
+
+
+
+
+.filAriane {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: flex-end;
+  padding-right: 6%;
+  width: 100%;
+  height: 100%;
+}
+.arianeSelected {
+  position: relative;
+  border-radius: 10px;
+  outline: solid 5px rgb(255, 196, 0);
+  width: 40px;
+  height: 40px;
+  background: rgb(184, 184, 184);
+  transition: 0.5s;
+}
+.arianeSelected:hover {
+  border-radius: 10px;
+  outline: solid 4px rgb(255, 255, 255);
+  width: 45px;
+  height: 45px;
+  background: rgb(184, 184, 184);
+}
+.arianeVide {
+  position: relative;
+  border-radius: 10px;
+  outline: solid 4px rgb(42, 42, 42);
+  width: 40px;
+  height: 40px;
+  background: rgb(184, 184, 184);
+}
+.arianeFil {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  padding-bottom: 24px;
+  width: 45px;
+  height: 45px;
+  background: url(../../../public/img/arianeFil.png);
+}
+.line {
+  position: relative;
+  height: 2px;
+  width: 94%;
+  background: rgb(143, 143, 143);
+}
+.callToActionRecapCommande {
+	font-family: "Roboto Condensed", sans-serif;
+	transition: 0.5s;
+	padding: 4px 23px;
+	background-color: rgb(255, 115, 0);
+	border-radius: 20px;
+	color: white;
+	text-decoration: none;
+	border: none;
+	margin: auto;
+  }
+  
+  .bouton .callToActionRecapCommande {
+	font-size: 17px;
+	margin-left: 16px;
+  }
+  
+  .callToActionRecapCommande:hover {
+	text-align: center;
+	background: rgb(255, 196, 0);
+  }
+
+.boutonSuivant {
+  position: relative;
+  width:100%;
+  text-align: right;
+  padding: 30px;
+  transition: 0.3s;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+.boutonSuivant a:hover {
+  color: rgb(255, 191, 0);
+  outline: solid 3px rgb(255, 191, 0);
+}
+.linkRecap{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+.boutonCommande {
+  position: relative;
+  transition: 0.3s;
+  margin: auto;
+}
+.boutonCommande a:hover {
+  color: rgb(255, 255, 255);
+  outline: solid 3px rgb(255, 191, 0);
+}
+.callToActionBlack {
+  font-family: "Roboto Condensed", sans-serif;
+  transition: 0.5s;
+  padding: 4px 23px;
+  background-color: rgb(15, 15, 15);
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  margin-left: 16px;
+}
+.linkSuivant{
+	font-family: "Roboto Condensed", sans-serif;
+	transition: 0.3s;
+	padding: 4px 23px;
+	background-color: rgb(255, 115, 0);
+	border-radius: 20px;
+	color: white;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	box-shadow: none;
+	// font-weight: bold;
+	color: white;
+	text-decoration: none;
+	outline: none;
+	border: none;
+}
+.linkSuivant:hover{
+	color: white;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+.callToActionSuivant {
+	font-family: "Roboto Condensed", sans-serif;
+	transition: 0.3s;
+	padding: 4px 23px;
+	background-color: rgb(255, 115, 0);
+	border-radius: 20px;
+	color: white;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	box-shadow: none;
+  }
+  .callToActionSuivant:hover {
+	text-align: center;
+	background: rgb(255, 196, 0);
+	border: none;
+	outline: none;
+	text-decoration: none;
+  }
+.boutonValiderModifications {
+  width: 100%;
+  text-align: right;
+  position: relative;
+  padding: 30px;
+  transition: 0.3s;
+}
+.callToActionBlack:hover {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  background: rgb(0, 0, 0);
+}
+.titleFinalization {
+  font-size: 45px;
+}
+.boutonValiderModifications a:hover {
+  color: rgb(14, 14, 14);
+  outline: solid 3px rgb(255, 191, 0);
+}
+
+/* -------- paiement -------- */
+
+.encadrementDiptiquePaiement{
+	display: flex;
+	flex-wrap: wrap;
+	height: fit-content;
+	width: 100%;
+	margin-bottom: 50px;
+  }
+
+.recapPrice {
+color: black;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.burger .recapBoutonSuivant {
+  position: relative;
+  top: -5%;
+  text-align: right;
+  padding: 30px;
+  transition: 0.5s;
+}
+
+.burger .recapBoutonSuivant a:hover {
+  color: rgb(255, 191, 0);
+  outline: solid 3px rgb(255, 191, 0);
+}
+
+.boutonsPaiement {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 30vh
+}
+.payPal {
+  margin: auto;
+  height: fit-content;
+  padding: 30px;
+  background-color: goldenrod;
+  border-radius: 10px;
+  border: none;
+  width: 270px;
+}
+.payPal img {
+  margin: auto;
+  width: 100%;
+}
+.carteBancaire {
+  box-shadow: 5px 5px 10px #88888869;
+  margin: auto;
+  height: fit-content;
+  padding: 40px;
+  background-color: rgb(52, 52, 52);
+  border-radius: 10px;
+  border: none;
+  width: 270px;
+}
+.carteBancaire img {
+  margin: auto;
+  width: 100%;
+}
+
+.promoPaiement {
+  font-size: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.burger .promoTitle {
+  padding-left: 45px;
+  font-size: 23px;
+  width: 95%;
+  height: fit-content;
+}
+
+.burger .promoPaiement img {
+  height: 75%;
+  font-family: "Lato";
+  font-weight: bold;
+  color: rgb(22, 22, 22);
+  text-align: center;
+}
+
+// --------- RESPONSIVE ---------
+
+@media screen and (max-width: 768px) {
+  // ------ ariane -----
+  .arianeVide {
+    border-radius: 5px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: rgb(184, 184, 184);
+  }
+
+  .arianeFil {
+    border-radius: 5px !important;
+    padding-bottom: 34px !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../../../public/img/arianeFil.png);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  
+}
