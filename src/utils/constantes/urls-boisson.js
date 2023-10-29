@@ -1,3 +1,3 @@
 export const URL = {
-  fetchBoissons: "http://localhost:8080/api/boisson/get",
+  fetchBoissons: `${process.env.REACT_APP_BASE_API_URL}/api/boisson/get`,
 };

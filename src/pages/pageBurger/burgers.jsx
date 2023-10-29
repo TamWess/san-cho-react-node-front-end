@@ -22,7 +22,7 @@ function Burger() {
         const { data } = await axios.get(URL.fetchBurger);
         setBurgers(data);
       } catch (error) {
-        console.log(error.message());
+        console.log(error.message);
       }
       console.log(burgers);
     };
@@ -41,7 +41,7 @@ function Burger() {
   
   function handleProduct() {
     if (productId !== undefined) {
-      fetch("http://localhost:8080/api/burger/" + productId)
+      fetch(`${process.env.REACT_APP_BASE_API_URL}/api/burger/${productId}`)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("burger", JSON.stringify(data));
@@ -52,7 +52,7 @@ function Burger() {
 
   function handleProductRecap() {
     if (productId !== undefined) {
-      fetch("http://localhost:8080/api/burger/" + productId)
+      fetch(`${process.env.REACT_APP_BASE_API_URL}/api/burger/${productId}`)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("burger", JSON.stringify(data));
@@ -98,8 +98,8 @@ function Burger() {
               </React.Fragment>
             ))}
           </div>
-		<div className="boutonValiderModifications" ref={button}>
-			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+		<div className="boutonValiderModifications" >
+			<button ref={button} className="callToActionRecapCommande" onClick={handleProductRecap} >
 			Valider la modification
 			</button>
 		</div>

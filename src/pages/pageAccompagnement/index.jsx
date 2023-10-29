@@ -40,7 +40,7 @@ function Accompagnement() {
 
   function handleProduct() {
     if (productId !== undefined) {
-      fetch("http://localhost:8080/api/accompagnement/" + productId)
+      fetch(`${process.env.REACT_APP_BASE_API_URL}/api/accompagnement/${productId}`)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("accompagnement", JSON.stringify(data));
@@ -51,7 +51,7 @@ function Accompagnement() {
   
   function handleProductRecap() {
     if (productId !== undefined) {
-      fetch("http://localhost:8080/api/accompagnement/" + productId)
+      fetch(`${process.env.REACT_APP_BASE_API_URL}/api/accompagnement/${productId}`)
         .then((res) => res.json())
         .then(function (data) {
           localStorage.setItem("accompagnement", JSON.stringify(data));
@@ -100,8 +100,8 @@ function Accompagnement() {
               </React.Fragment>
             ))}
           </div>
-		  <div className="boutonValiderModifications" ref={button}>
-			<button className="callToActionRecapCommande" onClick={handleProductRecap} >
+		  <div className="boutonValiderModifications" >
+			<button ref={button} className="callToActionRecapCommande" onClick={handleProductRecap} >
 			Valider la modification
 			</button>
 		  </div>

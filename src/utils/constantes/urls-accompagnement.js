@@ -1,3 +1,4 @@
 export const URLAccompagnements = {
-  fetchAccompagnements: "http://localhost:8080/api/accompagnement/get",
+  fetchAccompagnements:
+    `${process.env.REACT_APP_BASE_API_URL}/api/accompagnement/get`,
 };

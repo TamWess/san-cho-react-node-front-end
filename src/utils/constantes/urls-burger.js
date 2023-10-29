@@ -1,3 +1,3 @@
 export const URL = {
-  fetchBurger: "http://localhost:8080/api/burger/get",
+  fetchBurger: `${process.env.REACT_APP_BASE_API_URL}/api/burger/get`,
 };
