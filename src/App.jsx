@@ -17,32 +17,40 @@ import RecapCommande from "./pages/pageRecapCommande";
 import Paiement from "./pages/pagePaiement";
 import LaCarte from "./pages/pageLaCarte/laCarte";
 
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Template />}>
-        <Route index element={<Home />} />
-        <Route path="/clickandcollect" element={<ClickCollect />} />
-        <Route path="/burger" element={<Burger />} />
-        <Route path="/accompagnement" element={<Accompagnement />} />
-        <Route path="/boisson" element={<Boisson />} />
-        <Route path="/dessert" element={<Dessert />} />
-        <Route path="/recapitulatifCommande" element={<RecapCommande />} />
-        <Route path="/paiement" element={<Paiement />} />
-		<Route path="/laSanChoStory" element={<LaSanChoStory/>} />
-		<Route path="/laRecetteDesAnciens" element={<LaRecette/>} />
-		<Route path="/notreGuacamoleAuCactus" element={<NotreGuacamole/>} />
-		<Route path="/PourquoiCestBonQuandCaPique" element={<PourquoiCaPique/>} />
-		<Route path="/LeResto" element={<LeResto/>} />
-		<Route path="/LaCarte" element={<LaCarte/>} />
-		<Route path="/actus" element={<PageActus/>} >
-			<Route path="/actus/laRecetteDesAnciens" element={<LaRecette/>} />
-			<Route path="/actus/notreGuacamoleAuCactus" element={<NotreGuacamole/>} />
-			<Route path="/actus/PourquoiCestBonQuandCaPique" element={<PourquoiCaPique/>} />
-		</Route>
-      </Route>
-    </Routes>
-  );
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+	return (
+		<Routes>
+			<Route path="/" element={<Template />}>
+				<Route index element={<Home />} />
+				<Route path="/clickandcollect" element={<ClickCollect />} />
+				<Route path="/burger" element={<Burger />} />
+				<Route path="/accompagnement" element={<Accompagnement />} />
+				<Route path="/boisson" element={<Boisson />} />
+				<Route path="/dessert" element={<Dessert />} />
+				<Route path="/recapitulatifCommande" element={<RecapCommande />} />
+				<Route path="/paiement" element={<Paiement />} />
+				<Route path="/laSanChoStory" element={<LaSanChoStory />} />
+				<Route path="/laRecetteDesAnciens" element={<LaRecette />} />
+				<Route path="/notreGuacamoleAuCactus" element={<NotreGuacamole />} />
+				<Route path="/PourquoiCestBonQuandCaPique" element={<PourquoiCaPique />} />
+				<Route path="/LeResto" element={<LeResto />} />
+				<Route path="/LaCarte" element={<LaCarte />} />
+				<Route path="/actus" element={<PageActus />} >
+					<Route path="/actus/laRecetteDesAnciens" element={<LaRecette />} />
+					<Route path="/actus/notreGuacamoleAuCactus" element={<NotreGuacamole />} />
+					<Route path="/actus/PourquoiCestBonQuandCaPique" element={<PourquoiCaPique />} />
+				</Route>
+			</Route>
+		</Routes>
+	);
 }
 
 export default App;

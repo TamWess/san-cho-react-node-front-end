@@ -16,11 +16,17 @@
     src: url(../../../public/fonts/AfterSmile-Regular.otf);
   }
 }
+
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+
   > * {
     z-index: 2;
   }
+}
+
+.home {
+  overflow-x: hidden;
 }
 .divSanChoDeCuba {
   position: relative;
@@ -38,10 +44,11 @@ body {
   font-size: 55px;
   transition: 1s;
 }
-.homeActus{
-	margin-top: 70px;
+.homeActus {
+  margin-top: 70px;
 }
 .actus {
+  overflow-x: hidden;
   outline: solid 4px rgb(129, 95, 95);
   display: flex;
   flex-direction: column;
@@ -171,13 +178,13 @@ body {
 /******Le Resto*****/
 
 .restoStory {
+  position: relative;
   margin-top: 5%;
   z-index: 5 !important;
   display: flex;
   justify-content: space-around;
-  position: relative;
-  right: 1200px;
   opacity: 0;
+  right: 1200px;
   transition: 1s;
 }
 
@@ -251,11 +258,15 @@ body {
 /*******Nos Burgers******/
 
 .nosBurgerSection {
+  position: relative;
   margin-top: 3%;
   margin-bottom: 5%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  opacity: 0;
+  transition: 1s;
+  left: 1200px;
 }
 
 .nosBurgersTitle {
@@ -277,12 +288,6 @@ body {
   font-family: "Lato";
   padding-top: 18px;
   margin: 0 25px;
-}
-
-.slider {
-  opacity: 0;
-  left: 1200px;
-  transition: 1s;
 }
 
 .image1,
@@ -469,8 +474,8 @@ body {
   .divImgBurger {
     align-items: end;
   }
-  .divSanChoDeCuba{
-	text-align: center;
+  .divSanChoDeCuba {
+    text-align: center;
   }
   .sanChoDeCuba {
     bottom: 30px;
@@ -491,10 +496,10 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-	.pageAnciensActus{
-		position: relative;
-		bottom: 30px;
-	}
+  .pageAnciensActus {
+    position: relative;
+    bottom: 30px;
+  }
   .actusTitle {
     font-size: 20px !important;
   }

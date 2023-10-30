@@ -12,6 +12,7 @@ function Home() {
 
 	const videoRef = useRef();
 	const navigate = useNavigate();
+	const slideshowRef = useRef(null);
 
 
 	function pageNosBurgers() {
@@ -23,28 +24,18 @@ function Home() {
 
 		// --------- h1 ----------
 
+		window.addEventListener('scroll', function () {
+			const offsetTopSlide = slideshowRef.current?.offsetTop
+			if (window.scrollY > (offsetTopSlide - 700)) {
+				slideshowRef.current.style.opacity = "1";
+				slideshowRef.current.style.left = "0px";
+			}
+		})
+
 		const sanChoDeCuba = document.querySelector("h1");
 		sanChoDeCuba.style.right = "0px";
 
 		// -------- Anim Carroussel ------
-
-		window.addEventListener('load', function () {
-			const carroussel = document.querySelector(".slider");
-
-			window.addEventListener("scroll", function () {
-				if (window.scrollY > 650) {
-					carroussel.style.opacity = "1";
-					carroussel.style.left = "0px";
-				}
-			});
-		})
-		// // ---------Anime Burger PNG ----------
-
-		// 	const burgerEntry = document.querySelector(".burgerPng");
-		// 		burgerEntry.style.left = "0px";
-
-
-		// ---------Anim Header------
 
 		const header = document.querySelector(".container");
 
@@ -60,21 +51,10 @@ function Home() {
 			scroll = window.scrollY;
 		});
 
-		// -------Anim Burger-------
-
-		// const Burger = document.querySelector("#homeImage")
-
-		// function animBurger () {
-		// 	Burger.style.right = 0
-		// };
-
-		// animBurger();
-
 		const restoStory = document.querySelector(".restoStory");
-		console.log(restoStory);
 
 		window.addEventListener("scroll", function () {
-			if (window.scrollY > 280) {
+			if (window.scrollY >  -200) {
 				restoStory.style.opacity = "1";
 				restoStory.style.right = "0px";
 			}
@@ -153,7 +133,7 @@ function Home() {
 				</div>
 
 				<section>
-					<div className="nosBurgerSection" onClick={pageNosBurgers}>
+					<div className="nosBurgerSection" ref={slideshowRef} onClick={pageNosBurgers} >
 						<div className="nosBurgers" >
 							<h2 className="titiStoryTitle nosBurgersTitle">Nos Burgers 😋</h2>
 							<p className="nosBurgersText">
@@ -163,7 +143,6 @@ function Home() {
 								Découvrez notre fameux burger San-Cho, Le Samaritain, Le Ché, El Justo...<br />
 								<span className="bold">Chaque burger ayant son caractère bien affirmé</span><br /><br />
 								Nos burgers vous feront voyager et une chose est certaine... Ils ne vous laisseront pas indifférent.
-
 							</p>
 						</div>
 						<Slideshow />

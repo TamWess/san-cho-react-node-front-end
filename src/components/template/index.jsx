@@ -100,11 +100,18 @@ function Template() {
 						<p>CGV</p>
 					</div>
 					<div className="footerDiv02">
-						<p>Plan du site</p>
+						<Link className="linkFooter" to="/LaCarte">
 						<p>La carte</p>
-						<p>San Cho Story</p>
+						</Link>
+						<Link className="linkFooter" to="/laSanChoStory">
+						<p>San-Cho Story</p>
+						</Link>
+						<Link className="linkFooter" to="/LeResto">
 						<p>Le resto</p>
+						</Link>
+						<Link className="linkFooter" to="/actus">
 						<p>Actus</p>
+						</Link>
 					</div>
 					<div className="footerDiv04">
 						<p>Contact</p>
