@@ -12,7 +12,7 @@ function Home() {
 
 	const videoRef = useRef();
 	const navigate = useNavigate();
-	const slideshowRef = useRef(null);
+	const burgerSectionRef = useRef(null);
 
 
 	function pageNosBurgers() {
@@ -21,21 +21,16 @@ function Home() {
 
 	useEffect(() => {
 
-
-		// --------- h1 ----------
-
 		window.addEventListener('scroll', function () {
-			const offsetTopSlide = slideshowRef.current?.offsetTop
+			const offsetTopSlide = burgerSectionRef.current?.offsetTop
 			if (window.scrollY > (offsetTopSlide - 700)) {
-				slideshowRef.current.style.opacity = "1";
-				slideshowRef.current.style.left = "0px";
+				burgerSectionRef.current.style.opacity = "1";
+				burgerSectionRef.current.style.left = "0px";
 			}
 		})
 
 		const sanChoDeCuba = document.querySelector("h1");
 		sanChoDeCuba.style.right = "0px";
-
-		// -------- Anim Carroussel ------
 
 		const header = document.querySelector(".container");
 
@@ -85,7 +80,7 @@ function Home() {
 	return (
 		<div className="home">
 			<div id="homeImage">
-				<video autoPlay muted onEnded={handleEnd} className="homeVideo" ref={videoRef}>
+				<video autoPlay muted playsInline onEnded={handleEnd} className="homeVideo" ref={videoRef}>
 					<source src="/videos/entry-san-cho.mp4" type="video/mp4" />
 				</video>
 				<div className="divSanChoDeCuba">
@@ -133,7 +128,7 @@ function Home() {
 				</div>
 
 				<section>
-					<div className="nosBurgerSection" ref={slideshowRef} onClick={pageNosBurgers} >
+					<div className="nosBurgerSection" ref={burgerSectionRef} onClick={pageNosBurgers} >
 						<div className="nosBurgers" >
 							<h2 className="titiStoryTitle nosBurgersTitle">Nos Burgers 😋</h2>
 							<p className="nosBurgersText">
