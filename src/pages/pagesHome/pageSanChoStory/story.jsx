@@ -1,13 +1,15 @@
 import React from "react";
 import "../pageLeResto/leResto.scss";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function LaSanChoStory() {
 
+	const diptiqueRestoRef = useRef(null)
+
 	useEffect(() => {
 
-		const diptiqueAnim = document.querySelector(".diptiqueResto");
-		diptiqueAnim.style.left = "0px";
+		
+		diptiqueRestoRef.current.style.left = "0px";
 
 	})
 
@@ -22,7 +24,7 @@ function LaSanChoStory() {
 						alt="San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 					/>
 				</div>
-				<div className="diptiqueResto" >
+				<div className="diptiqueResto" ref={diptiqueRestoRef} >
 					<h1 className="actusTitleResto">La San Cho Story 🍅</h1>
 					<br />
 					

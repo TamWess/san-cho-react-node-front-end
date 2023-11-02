@@ -4,8 +4,6 @@ import axios from "axios";
 import "../pageBurger/burgers.scss";
 import FilAriane from "../../components/fil Ariane/fil.ariane";
 
-// URL API
-
 import { URLAccompagnements } from "../../utils/constantes/urls-accompagnement.js";
 
 function Accompagnement() {

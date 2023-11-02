@@ -1,14 +1,17 @@
 import React from "react";
 import "../../../utils/style/base.scss"
 import "./leResto.scss";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function LeResto() {
 
+	const diptiqueRestoRef = useRef(null)
+
 	useEffect(() => {
 
-		const diptiqueAnim = document.querySelector(".diptiqueResto");
-		diptiqueAnim.style.left = "0px";
+		
+		diptiqueRestoRef.current.style.left = "0px";
+
 	})
 
 	return (

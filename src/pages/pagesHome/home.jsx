@@ -13,6 +13,8 @@ function Home() {
 	const videoRef = useRef();
 	const navigate = useNavigate();
 	const burgerSectionRef = useRef(null);
+	const restoStoryRef = useRef(null);
+	const mousemoveRef = useRef(null)
 
 
 	function pageNosBurgers() {
@@ -46,27 +48,19 @@ function Home() {
 			scroll = window.scrollY;
 		});
 
-		const restoStory = document.querySelector(".restoStory");
-
 		window.addEventListener("scroll", function () {
 			if (window.scrollY >  -200) {
-				restoStory.style.opacity = "1";
-				restoStory.style.right = "0px";
+				restoStoryRef.current.style.opacity = "1";
+				restoStoryRef.current.style.right = "0px";
 			}
 		});
 
 		// -------- Mousemove Burger ---------
 
-		const mousemove = document.querySelector(".mousemove");
-
 		window.addEventListener("mousemove", function (e) {
-			// console.log(e.target);
-			mousemove.style.left = e.pageX + "px";
-			mousemove.style.top = e.pageY + "px";
+			mousemoveRef.current.style.left = e.pageX + "px";
+			mousemoveRef.current.style.top = e.pageY + "px";
 		});
-
-		const burgerCarte = document.getElementById("burgerCarte");
-		const burger01 = document.querySelectorAll(".burgersChoiceCadre1");
 
 	});
 	function handleEnd() {
@@ -89,7 +83,7 @@ function Home() {
 				<div className="divImgBurger">
 					<img className="burgerPng" src="/img/san_cho_background_01.png" alt="San cho" />
 				</div>
-				<div className="mousemove">
+				<div className="mousemove" ref={mousemoveRef}>
 					<img className="imgMouseMove"
 						src="/icns/San_cho_burger.svg"
 						alt="Burger Mexicain Accueil Titi Burger Viande Bio Livraison Rapide Restaurant Paris"
@@ -105,7 +99,7 @@ function Home() {
 					<div className="divBanniere">Viande origine France</div>
 				</div>
 
-				<section className="restoStory">
+				<section className="restoStory" ref={restoStoryRef}>
 					<Link to="/LeResto" className="leResto"><div >
 						<h2 id="TitleLeResto">Le Resto 🌞</h2>
 					</div>

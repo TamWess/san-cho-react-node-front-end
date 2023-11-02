@@ -1,16 +1,15 @@
 import React from "react";
 import "../../../pagesHome/home.scss";
 import "../../pageLeResto/leResto.scss"
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function LaRecette() {
 
+	const diptiqueRestoRef = useRef(null)
+
 	useEffect(() => {
 
-		const diptiqueAnim = document.querySelector(".diptiqueResto");
-		diptiqueAnim.style.left = "0px";
-
-
+		diptiqueRestoRef.current.style.left = "0px";
 
 	})
 

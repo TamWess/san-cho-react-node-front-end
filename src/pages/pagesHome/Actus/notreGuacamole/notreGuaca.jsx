@@ -1,14 +1,15 @@
 import React from "react";
 import "../../../../utils/style/base.scss"
 import "../../../pagesHome/home.scss";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function NotreGuacamole() {
 
-	useEffect(() => {
+	const diptiqueRestoRef = useRef(null)
 
-		const diptiqueAnim = document.querySelector(".diptiqueResto");
-		diptiqueAnim.style.left = "0px";
+	useEffect(() => {
+		
+		diptiqueRestoRef.current.style.left = "0px";
 
 	})
 
