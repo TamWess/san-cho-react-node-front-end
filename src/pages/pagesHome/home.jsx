@@ -78,7 +78,7 @@ function Home() {
 					<source src="/videos/entry-san-cho.mp4" type="video/mp4" />
 				</video>
 				<div className="divSanChoDeCuba">
-					<h1 className="sanChoDeCuba">San Cho de Cuba! 🌶️ </h1>
+					<h1 className="sanChoDeCuba">San Cho! 🌶️</h1>
 				</div>
 				<div className="divImgBurger">
 					<img className="burgerPng" src="/img/san_cho_background_01.png" alt="San cho" />
