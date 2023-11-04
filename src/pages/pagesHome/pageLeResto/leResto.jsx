@@ -9,7 +9,6 @@ function LeResto() {
 
 	useEffect(() => {
 
-		
 		diptiqueRestoRef.current.style.left = "0px";
 
 	})
@@ -25,9 +24,9 @@ function LeResto() {
 						alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 					/>
 				</div>
-				<div className="diptiqueResto" >
+				<div className="diptiqueResto" ref={diptiqueRestoRef}>
 					<h1 className="actusTitleResto">Le Resto 🌞</h1>
-					<br />
+					<br/>
 					<p className="subTextAnciens"> <span className="bold">🌞 C'est avec plaisir que nous vous accueillons au 112, rue du Faubourg-Saint-Honoré à Paris. Dans notre restaurant, chaque poutre, chaque élément de décoration, chacune de nos assiettes est issue de notre amour du partage.</span> <br /><br /><br />
 						<p className="textAnciens"> <span className="bold">À 5 minutes de l'Arc de Triomphe</span>, notre restaurant à l'atmosphère festive vous apportera le soleil de l'Amérique du Sud.
 							Nous vous réservons un accueil chaleureux.<br /><br />

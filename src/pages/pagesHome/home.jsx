@@ -120,9 +120,9 @@ function Home() {
 				<div className="VLine">
 					<img src="/icns/ligne_v.svg" alt="" />
 				</div>
-
+				
 				<section>
-					<div className="nosBurgerSection" ref={burgerSectionRef} onClick={pageNosBurgers} >
+					<div className="nosBurgerSection" ref={burgerSectionRef} >
 						<div className="nosBurgers" >
 							<h2 className="titiStoryTitle nosBurgersTitle">Nos Burgers 😋</h2>
 							<p className="nosBurgersText">
@@ -133,6 +133,7 @@ function Home() {
 								<span className="bold">Chaque burger ayant son caractère bien affirmé</span><br /><br />
 								Nos burgers vous feront voyager et une chose est certaine... Ils ne vous laisseront pas indifférent.
 							</p>
+							<Link to={"laCarte"} className="lireLaSuite">Voir la carte...</Link>
 						</div>
 						<Slideshow />
 					</div>
