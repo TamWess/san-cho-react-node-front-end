@@ -24,7 +24,7 @@ function NotreGuacamole() {
 						alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 					/>
 				</div>
-				<div className="diptiqueResto" >
+				<div className="diptiqueResto" ref={diptiqueRestoRef}>
 					<h1 className="actusTitleResto">Notre Guacamole au Cactus</h1>
 					<br />
 					<br />

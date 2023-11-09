@@ -24,7 +24,7 @@ function LaRecette() {
 						alt="SanCho San Cho Recette Piment Livraison Rapide Restaurant Mexicain Paris Burger"
 					/>
 				</div>
-				<div className="diptiqueResto" >
+				<div className="diptiqueResto" ref={diptiqueRestoRef} >
 					<h1 className="actusTitleResto">La Recette des Anciens</h1>
 
 					<p className="subTextAnciens"><span className="bold">Depuis dejà deux ans, San Cho Burger le premier restaurant San Cho Burger est né dans la rue du Faubourg Saint Honoré à Paris.</span> <br /><br /><br />
